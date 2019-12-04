@@ -1,3 +1,7 @@
+// Image Citation: All the images are used from below url: 
+// https://www.uhaul.com/
+// https://www.globalindustrial.ca/
+
 const allProducts = [
     {
         id: `100`,
@@ -216,7 +220,7 @@ const allProducts = [
         size: `Large`,
         weight: 0.3
     },{
-        id: `117`,
+        id: `118`,
         name: `Chair Cover`,
         image: `add-image-url-here`,
         description: `Chair Cover is great for protecting chairs, stools and other furniture from debris`,
@@ -228,7 +232,7 @@ const allProducts = [
         size: `Medium`,
         weight: 0.3
     },{
-        id: `118`,
+        id: `119`,
         name: `Bubble Wrap Small`,
         image: `add-image-url-here`,
         description: `Bubble wrap is efficient way to protect and wrap fragile items such as glassware, electronics, artwork, home decor and more.`,
@@ -240,7 +244,7 @@ const allProducts = [
         size: `Small`,
         weight: 0.5
     },{
-        id: `119`,
+        id: `120`,
         name: `Bubble Wrap Medium`,
         image: `add-image-url-here`,
         description: `Bubble wrap is efficient way to protect and wrap fragile items such as glassware, electronics, artwork, home decor and more.`,
@@ -252,7 +256,7 @@ const allProducts = [
         size: `Medium`,
         weight: 0.9
     },{
-        id: `120`,
+        id: `121`,
         name: `Bubble Wrap Large`,
         image: `add-image-url-here`,
         description: `Bubble wrap is efficient way to protect and wrap fragile items such as glassware, electronics, artwork, home decor and more.`,

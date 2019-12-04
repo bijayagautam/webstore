@@ -1,6 +1,6 @@
 const allProducts = [
     {
-        id: `OTN100`,
+        id: `100`,
         name: `Cargo Box Small`,
         image: `add-image-url-here`,
         description: `Small sized cargo boxes are ideal for moving, storing or shipping your smaller household items.`,
@@ -12,7 +12,7 @@ const allProducts = [
         size: `Small`,
         weight: 0.5
     },{
-        id: `OTN101`,
+        id: `101`,
         name: `Cargo Box Medium`,
         image: `add-image-url-here`,
         description: `Medium sized cargo boxes are ideal for moving, storing or shipping your medium household items.`,
@@ -24,7 +24,7 @@ const allProducts = [
         size: `Medium`,
         weight: 0.7
     },{
-        id: `OTN102`,
+        id: `102`,
         name: `Cargo Box Large`,
         image: `add-image-url-here`,
         description: `Large sized cargo boxes are ideal for moving, storing or shipping your larger household items.`,
@@ -36,7 +36,7 @@ const allProducts = [
         size: `Large`,
         weight: 0.8
     },{
-        id: `OTN103`,
+        id: `103`,
         name: `Cargo Box Extra Large`,
         image: `add-image-url-here`,
         description: `Extra large sized cargo boxes are ideal for moving, storing or shipping your extra larger household items.`,
@@ -48,7 +48,7 @@ const allProducts = [
         size: `Extra Large`,
         weight: 0.9
     },{
-        id: `OTN104`,
+        id: `104`,
         name: `Packaging Paper Tape Small`,
         image: `add-image-url-here`,
         description: `Packaging Paper Tape is ideal for moving and storage. It easily tears by hand and is self-sticking.`,
@@ -60,7 +60,7 @@ const allProducts = [
         size: `27 Metre`,
         weight: 0.2
     },{
-        id: `OTN105`,
+        id: `105`,
         name: `Packaging Paper Tape Medium`,
         image: `add-image-url-here`,
         description: `Packaging Paper Tape is ideal for moving and storage. It easily tears by hand and is self-sticking.`,
@@ -72,7 +72,7 @@ const allProducts = [
         size: `40 Metre`,
         weight: 0.3
     },{
-        id: `OTN106`,
+        id: `106`,
         name: `Packaging Paper Tape Large`,
         image: `add-image-url-here`,
         description: `Packaging Paper Tape is ideal for moving and storage. It easily tears by hand and is self-sticking.`,
@@ -84,7 +84,7 @@ const allProducts = [
         size: `60 Metre`,
         weight: 0.4
     },{
-        id: `OTN107`,
+        id: `107`,
         name: `Packaging Paper Tape Extra Large`,
         image: `add-image-url-here`,
         description: `Packaging Paper Tape is ideal for moving and storage. It easily tears by hand and is self-sticking.`,
@@ -96,7 +96,7 @@ const allProducts = [
         size: `100 Metre`,
         weight: 0.5
     },{
-        id: `OTN108`,
+        id: `108`,
         name: `Duct Tape Small`,
         image: `add-image-url-here`,
         description: `A moisture resistance tape with easy tear and conformability.`,
@@ -108,7 +108,7 @@ const allProducts = [
         size: `100 Metre`,
         weight: 0.5
     },{
-        id: `OTN109`,
+        id: `109`,
         name: `Duct Tape Large`,
         image: `add-image-url-here`,
         description: `A moisture resistance tape with easy tear and conformability.`,
@@ -120,7 +120,7 @@ const allProducts = [
         size: `200 Metre`,
         weight: 1
     },{
-        id: `OTN110`,
+        id: `110`,
         name: `Electrical Tape Small`,
         image: `add-image-url-here`,
         description: `High temperature conformable elastic thick tape.`,
@@ -132,7 +132,7 @@ const allProducts = [
         size: `200 Metre`,
         weight: 0.5
     },{
-        id: `OTN111`,
+        id: `111`,
         name: `Electrical Tape Large`,
         image: `add-image-url-here`,
         description: `High temperature conformable elastic thick tape.`,
@@ -144,7 +144,7 @@ const allProducts = [
         size: `150 Metre`,
         weight: 0.7
     },{
-        id: `OTN112`,
+        id: `112`,
         name: `White Tape`,
         image: `add-image-url-here`,
         description: `Great for assembling moving and cargo boxes. No blades or knives required.`,
@@ -156,7 +156,7 @@ const allProducts = [
         size: `100 Metre`,
         weight: 0.4
     },{
-        id: `OTN113`,
+        id: `113`,
         name: `Luggage Box`,
         image: `add-image-url-here`,
         description: `Box handle makes it easy to use as a suitcase for travel or for shipping.`,
@@ -168,7 +168,7 @@ const allProducts = [
         size: `Large`,
         weight: 0.7
     },{
-        id: `OTN114`,
+        id: `114`,
         name: `Matress Bag Twin`,
         image: `add-image-url-here`,
         description: `Matress bags will keep your mattresses or box springs protected against dust, soil, and light.`,
@@ -180,7 +180,7 @@ const allProducts = [
         size: `Twin`,
         weight: 0.7
     },{
-        id: `OTN115`,
+        id: `115`,
         name: `Matress Bag Queen`,
         image: `add-image-url-here`,
         description: `Matress bags will keep your mattresses or box springs protected against dust, soil, and light.`,
@@ -192,7 +192,7 @@ const allProducts = [
         size: `Queen`,
         weight: 0.7
     },{
-        id: `OTN116`,
+        id: `116`,
         name: `Matress Bag King`,
         image: `add-image-url-here`,
         description: `Matress bags will keep your mattresses or box springs protected against dust, soil, and light.`,
@@ -204,7 +204,7 @@ const allProducts = [
         size: `King`,
         weight: 0.8
     },{
-        id: `OTN117`,
+        id: `117`,
         name: `Sofa Cover`,
         image: `add-image-url-here`,
         description: `Sofa Cover is great for protecting sofas, couches and other furniture from debris`,
@@ -216,7 +216,7 @@ const allProducts = [
         size: `Large`,
         weight: 0.3
     },{
-        id: `OTN117`,
+        id: `117`,
         name: `Chair Cover`,
         image: `add-image-url-here`,
         description: `Chair Cover is great for protecting chairs, stools and other furniture from debris`,
@@ -228,7 +228,7 @@ const allProducts = [
         size: `Medium`,
         weight: 0.3
     },{
-        id: `OTN118`,
+        id: `118`,
         name: `Bubble Wrap Small`,
         image: `add-image-url-here`,
         description: `Bubble wrap is efficient way to protect and wrap fragile items such as glassware, electronics, artwork, home decor and more.`,
@@ -240,7 +240,7 @@ const allProducts = [
         size: `Small`,
         weight: 0.5
     },{
-        id: `OTN119`,
+        id: `119`,
         name: `Bubble Wrap Medium`,
         image: `add-image-url-here`,
         description: `Bubble wrap is efficient way to protect and wrap fragile items such as glassware, electronics, artwork, home decor and more.`,
@@ -252,7 +252,7 @@ const allProducts = [
         size: `Medium`,
         weight: 0.9
     },{
-        id: `OTN120`,
+        id: `120`,
         name: `Bubble Wrap Large`,
         image: `add-image-url-here`,
         description: `Bubble wrap is efficient way to protect and wrap fragile items such as glassware, electronics, artwork, home decor and more.`,

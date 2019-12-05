@@ -6,10 +6,10 @@
 }
 
 body{
-    padding: 0 1em;
     background-color: rgb(187, 243, 224);
 }
 
+/* CSS for header goes here */
 .header {
     background-color: var(--semidarkcolor);
     color: var(--lightcolor);
@@ -38,7 +38,7 @@ body{
 .main-menu {
     grid-area: menu;
     text-align: center; 
-    /* display: none; */
+    display: none;
     /* change display none on screen size change */
 }
 
@@ -58,3 +58,29 @@ body{
     grid-area: checkout;
 }
 
+/* CSS for main contents goes here */
+.main-content{
+    padding: 1em 1em;
+}
+
+/* Media Query Goes Here--- */
+@media screen and (min-width: 700px) {
+    .navbar {
+      grid-template-columns: 3em  auto  2em;
+      grid-template-areas:  "logo menu checkout";  
+    }
+  
+    .hamburger {
+      display: none;
+    }
+  
+    .main-menu {
+      text-align: center;
+      display: flex;
+      justify-content: space-evenly;
+    }
+  
+    .main-menu a {
+      padding: 0 1em;
+    }
+}

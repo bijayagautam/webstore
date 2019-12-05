@@ -48,6 +48,8 @@
             <option value="cover">Cover</option>
             <option value="wrap">Wrap</option>
           </select>
+          <input type="button" value="Show All Products" id="showButton">
+
         </fieldset>
       </form>
 
@@ -55,25 +57,7 @@
       <section>
         <h2>Search Results</h2>
         <div id="products">
-          <article class="product">
-            <header>
-              <img src="/img/small-box.jpg" alt="Small Box">
-            </header>
-            <h3>Cargo Box Small</h3>
-            <p>Small sized cargo boxes are ideal for moving, storing or shipping your smaller household items.</p>
-            <form>
-              <ul>
-                <li><label><input type="radio" name="size" value="o"> <span>Ship to home</span></label></li>
-                <li><label><input type="radio" name="size" value="s"> <span>Pick up in store</span></label></li>
-              </ul>
-              <footer class="footer-product">
-                <data value="39"><del>$3.99</del> <ins>$1.99</ins></data>
-                <button type="button"><span class="material-icons">add_shopping_cart</span> Add to Cart</button>
-                <button type="button"><span class="material-icons">favorite</span></button>
-                <a href="#">see more</a>
-              </footer>
-            </form>
-          </article>
+          <!-- All product goes here pulled as html string from index.js -->
         </div>
       </section>
     </main>

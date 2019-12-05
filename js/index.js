@@ -2,6 +2,10 @@
 // https://www.uhaul.com/
 // https://www.globalindustrial.ca/
 
+const settings = {
+    imgpath: '/img/'
+}
+
 const allProducts = [
     {
         id: `100`,
@@ -269,3 +273,38 @@ const allProducts = [
         weight: 0.9
     },
 ];
+
+
+
+
+function getProductAsHtmlString(product) {
+    return `
+    <article class="product">
+        <header>
+            <img src="/img/small-box.jpg" alt="Small Box">
+        </header>
+        <h3>${product.name}</h3>
+        <p>${product.description}</p>
+        <form>
+            <ul>
+                <li><label><input type="radio" name="size" value="o"> <span>Ship to home</span></label></li>
+                <li><label><input type="radio" name="size" value="s"> <span>Pick up in store</span></label></li>
+            </ul>
+            <footer class="footer-product">
+                <data value="39"><del>$3.99</del> <ins>$1.99</ins></data>
+                <button type="button"><span class="material-icons">add_shopping_cart</span> Add to Cart</button>
+                <button type="button"><span class="material-icons">favorite</span></button>
+                <a href="#">see more</a>
+            </footer>
+        </form>
+    </article>`;
+}
+
+function showAllProduct(){
+    const product = allProducts.slice(0,3);
+    document.getElementById('products').innerHTML = product.map(getProductAsHtmlString).join('\n');
+  }
+
+document.getElementById('showButton').addEventListener('click', showAllProduct)
+
+  

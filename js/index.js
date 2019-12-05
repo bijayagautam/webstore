@@ -300,11 +300,12 @@ function getProductAsHtmlString(product) {
     </article>`;
 }
 
-function showAllProduct(){
-    const product = allProducts.slice(0,3);
-    document.getElementById('products').innerHTML = product.map(getProductAsHtmlString).join('\n');
-  }
 
-document.getElementById('showButton').addEventListener('click', showAllProduct)
-
+const renderProductsFromArray = arr => {
+    document.getElementById('products').innerHTML = arr.map(getProductAsHtmlString).join('\n');
+   
+}
   
+window.addEventListener('load', () => {
+    renderProductsFromArray(allProducts);
+});

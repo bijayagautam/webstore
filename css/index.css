@@ -1,0 +1,60 @@
+:root {
+    --lightcolor: #fff;
+    --semidarkcolor: #1d2e03;
+    --darkcolor: #a81313;
+
+}
+
+body{
+    padding: 0 1em;
+    background-color: rgb(187, 243, 224);
+}
+
+.header {
+    background-color: var(--semidarkcolor);
+    color: var(--lightcolor);
+}
+
+.navbar {
+    display: grid;
+    grid-template-columns: 2em  auto  2em;
+    grid-template-areas:  "menudrop logo checkout"
+                          "menu menu menu";
+}
+
+.logo {
+    grid-area: logo;
+    justify-self: center; 
+    max-width: 15%; 
+    /* re-check logo size */
+}
+
+.hamburger {
+    grid-area: menudrop;
+    text-align: center;
+    font-size: 1.6em;
+}
+
+.main-menu {
+    grid-area: menu;
+    text-align: center; 
+    /* display: none; */
+    /* change display none on screen size change */
+}
+
+.main-menu a {
+    display: block;
+    color: var(--lightcolor);
+    text-decoration: none;
+    line-height: 2;
+}
+
+.main-menu a:hover {
+    color: var(--darkcolor);
+    background-color: var(--lightcolor);
+}
+
+.viewcart {
+    grid-area: checkout;
+}
+

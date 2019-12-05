@@ -1,12 +1,23 @@
 :root {
     --lightcolor: #fff;
-    --semidarkcolor: #1d2e03;
-    --darkcolor: #a81313;
+    --semidarkcolor: #dedfdd;
+    --darkcolor: #fafaf8;
 
 }
 
 body{
-    background-color: rgb(187, 243, 224);
+    background-color: rgb(215, 245, 235);
+    padding: 0;
+    margin: 0;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+ul{
+    list-style: none;
 }
 
 /* CSS for header goes here */
@@ -33,6 +44,8 @@ body{
     grid-area: menudrop;
     text-align: center;
     font-size: 1.6em;
+    background-color: var(--semidarkcolor);
+
 }
 
 .main-menu {
@@ -54,13 +67,35 @@ body{
     background-color: var(--lightcolor);
 }
 
-.viewcart {
+.shoppingcart {
     grid-area: checkout;
+    background-color: var(--semidarkcolor);
 }
 
 /* CSS for main contents goes here */
 .main-content{
     padding: 1em 1em;
+    background-color: var(--darkcolor);
+}
+
+.search-area{
+    color: rgb(27, 8, 97);
+}
+
+.search-form{
+    background-color: rgb(245, 241, 237);
+}
+
+.product {
+    padding: 1em 1em 2em 1em;
+    background-size: auto 15em;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-color: rgb(248, 247, 247);
+}
+
+.footer-product{
+    padding: 1em;
 }
 
 /* Media Query Goes Here--- */

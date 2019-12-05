@@ -10,7 +10,7 @@ const allProducts = [
     {
         id: `100`,
         name: `Cargo Box Small`,
-        image: `add-image-url-here`,
+        image: `small-box.jpg`,
         description: `Small sized cargo boxes are ideal for moving, storing or shipping your smaller household items.`,
         price: 1.99,
         quantity: 200,
@@ -22,7 +22,7 @@ const allProducts = [
     },{
         id: `101`,
         name: `Cargo Box Medium`,
-        image: `add-image-url-here`,
+        image: `medium-box.jpg`,
         description: `Medium sized cargo boxes are ideal for moving, storing or shipping your medium household items.`,
         price: 2.99,
         quantity: 150,
@@ -34,7 +34,7 @@ const allProducts = [
     },{
         id: `102`,
         name: `Cargo Box Large`,
-        image: `add-image-url-here`,
+        image: `large-box.jpg`,
         description: `Large sized cargo boxes are ideal for moving, storing or shipping your larger household items.`,
         price: 3.99,
         quantity: 125,
@@ -46,7 +46,7 @@ const allProducts = [
     },{
         id: `103`,
         name: `Cargo Box Extra Large`,
-        image: `add-image-url-here`,
+        image: `extra-large-box.jpg`,
         description: `Extra large sized cargo boxes are ideal for moving, storing or shipping your extra larger household items.`,
         price: 4.99,
         quantity: 100,
@@ -58,7 +58,7 @@ const allProducts = [
     },{
         id: `104`,
         name: `Packaging Paper Tape Small`,
-        image: `add-image-url-here`,
+        image: `paper-tape-small.jpg`,
         description: `Packaging Paper Tape is ideal for moving and storage. It easily tears by hand and is self-sticking.`,
         price: 2.99,
         quantity: 200,
@@ -70,7 +70,7 @@ const allProducts = [
     },{
         id: `105`,
         name: `Packaging Paper Tape Medium`,
-        image: `add-image-url-here`,
+        image: `paper-tape-medium.jpg`,
         description: `Packaging Paper Tape is ideal for moving and storage. It easily tears by hand and is self-sticking.`,
         price: 3.99,
         quantity: 150,
@@ -82,7 +82,7 @@ const allProducts = [
     },{
         id: `106`,
         name: `Packaging Paper Tape Large`,
-        image: `add-image-url-here`,
+        image: `paper-tape-large.jpg`,
         description: `Packaging Paper Tape is ideal for moving and storage. It easily tears by hand and is self-sticking.`,
         price: 4.99,
         quantity: 120,
@@ -94,7 +94,7 @@ const allProducts = [
     },{
         id: `107`,
         name: `Packaging Paper Tape Extra Large`,
-        image: `add-image-url-here`,
+        image: `paper-tape-extra-large.jpg`,
         description: `Packaging Paper Tape is ideal for moving and storage. It easily tears by hand and is self-sticking.`,
         price: 5.99,
         quantity: 100,
@@ -106,7 +106,7 @@ const allProducts = [
     },{
         id: `108`,
         name: `Duct Tape Small`,
-        image: `add-image-url-here`,
+        image: `duct-tape-small.jpg`,
         description: `A moisture resistance tape with easy tear and conformability.`,
         price: 10.99,
         quantity: 100,
@@ -118,7 +118,7 @@ const allProducts = [
     },{
         id: `109`,
         name: `Duct Tape Large`,
-        image: `add-image-url-here`,
+        image: `duct-tape-large.jpg`,
         description: `A moisture resistance tape with easy tear and conformability.`,
         price: 18.99,
         quantity: 100,
@@ -130,7 +130,7 @@ const allProducts = [
     },{
         id: `110`,
         name: `Electrical Tape Small`,
-        image: `add-image-url-here`,
+        image: `electrical-tape-small.jpg`,
         description: `High temperature conformable elastic thick tape.`,
         price: 14.99,
         quantity: 100,
@@ -142,7 +142,7 @@ const allProducts = [
     },{
         id: `111`,
         name: `Electrical Tape Large`,
-        image: `add-image-url-here`,
+        image: `electrical-tape-large.jpg`,
         description: `High temperature conformable elastic thick tape.`,
         price: 19.99,
         quantity: 100,
@@ -154,7 +154,7 @@ const allProducts = [
     },{
         id: `112`,
         name: `White Tape`,
-        image: `add-image-url-here`,
+        image: `white-tape.jpg`,
         description: `Great for assembling moving and cargo boxes. No blades or knives required.`,
         price: 9.99,
         quantity: 50,
@@ -166,7 +166,7 @@ const allProducts = [
     },{
         id: `113`,
         name: `Luggage Box`,
-        image: `add-image-url-here`,
+        image: `luggage-box.jpg`,
         description: `Box handle makes it easy to use as a suitcase for travel or for shipping.`,
         price: 6.99,
         quantity: 50,
@@ -178,7 +178,7 @@ const allProducts = [
     },{
         id: `114`,
         name: `Matress Bag Twin`,
-        image: `add-image-url-here`,
+        image: `matress-bag-twin.jpg`,
         description: `Matress bags will keep your mattresses or box springs protected against dust, soil, and light.`,
         price: 4.99,
         quantity: 75,
@@ -190,7 +190,7 @@ const allProducts = [
     },{
         id: `115`,
         name: `Matress Bag Queen`,
-        image: `add-image-url-here`,
+        image: `matress-bag-queen.jpg`,
         description: `Matress bags will keep your mattresses or box springs protected against dust, soil, and light.`,
         price: 5.99,
         quantity: 75,
@@ -202,7 +202,7 @@ const allProducts = [
     },{
         id: `116`,
         name: `Matress Bag King`,
-        image: `add-image-url-here`,
+        image: `matress-bag-king.jpg`,
         description: `Matress bags will keep your mattresses or box springs protected against dust, soil, and light.`,
         price: 6.99,
         quantity: 75,
@@ -214,7 +214,7 @@ const allProducts = [
     },{
         id: `117`,
         name: `Sofa Cover`,
-        image: `add-image-url-here`,
+        image: `sofa-cover.jpg`,
         description: `Sofa Cover is great for protecting sofas, couches and other furniture from debris`,
         price: 7.99,
         quantity: 75,
@@ -226,7 +226,7 @@ const allProducts = [
     },{
         id: `118`,
         name: `Chair Cover`,
-        image: `add-image-url-here`,
+        image: `chair-cover.jpg`,
         description: `Chair Cover is great for protecting chairs, stools and other furniture from debris`,
         price: 7.99,
         quantity: 75,
@@ -238,7 +238,7 @@ const allProducts = [
     },{
         id: `119`,
         name: `Bubble Wrap Small`,
-        image: `add-image-url-here`,
+        image: `bubble-wrap-small.jpg`,
         description: `Bubble wrap is efficient way to protect and wrap fragile items such as glassware, electronics, artwork, home decor and more.`,
         price: 17.99,
         quantity: 75,
@@ -250,7 +250,7 @@ const allProducts = [
     },{
         id: `120`,
         name: `Bubble Wrap Medium`,
-        image: `add-image-url-here`,
+        image: `bubble-wrap-medium.jpg`,
         description: `Bubble wrap is efficient way to protect and wrap fragile items such as glassware, electronics, artwork, home decor and more.`,
         price: 29.99,
         quantity: 75,
@@ -262,7 +262,7 @@ const allProducts = [
     },{
         id: `121`,
         name: `Bubble Wrap Large`,
-        image: `add-image-url-here`,
+        image: `bubble-wrap-large.jpg`,
         description: `Bubble wrap is efficient way to protect and wrap fragile items such as glassware, electronics, artwork, home decor and more.`,
         price: 35.99,
         quantity: 75,
@@ -281,7 +281,7 @@ function getProductAsHtmlString(product) {
     return `
     <article class="product">
         <header>
-            <img src="/img/small-box.jpg" alt="Small Box">
+            <img src="${settings.imgpath + product.image}" alt="${product.name}">
         </header>
         <h3>${product.name}</h3>
         <p>${product.description}</p>

@@ -291,7 +291,7 @@ function getProductAsHtmlString(product) {
                 <li><label><input type="radio" name="size" value="s"> <span>Pick up in store</span></label></li>
             </ul>
             <footer class="footer-product">
-                <data value="39"><del>$3.99</del> <ins>$1.99</ins></data>
+                <data value="39"><del>$3.99</del> <ins>$${product.price}</ins></data>
                 <button type="button"><span class="material-icons">add_shopping_cart</span> Add to Cart</button>
                 <button type="button"><span class="material-icons">favorite</span></button>
                 <a href="#">see more</a>

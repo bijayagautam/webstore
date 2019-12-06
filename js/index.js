@@ -283,7 +283,7 @@ function getProductAsHtmlString(product) {
         <header>
             <img src="${settings.imgpath + product.image}" alt="${product.name}">
         </header>
-        <h3>${product.name}</h3>
+        <a href="#"><h3>${product.name}</h3></a>
         <p>${product.description}</p>
         <form>
             <ul>
@@ -291,10 +291,14 @@ function getProductAsHtmlString(product) {
                 <li><label><input type="radio" name="size" value="s"> <span>Pick up in store</span></label></li>
             </ul>
             <footer class="footer-product">
-                <data value="39"><del>$3.99</del> <ins>$${product.price}</ins></data>
-                <button type="button"><span class="material-icons">add_shopping_cart</span> Add to Cart</button>
-                <button type="button"><span class="material-icons">favorite</span></button>
-                <a href="#">see more</a>
+                <data value="1.99" class="price"><label>$1.99</label></data>
+                <ul>
+                  <li><input type="button" value="+" id="addQtyButton" class="qtyButton"></li>
+                  <li><input type="button" value="-" id="substractQtyButton" class="qtyButton"></li>
+                </ul>
+                <label id="productQuantityLabel" class="quantity">0</label>
+                <button type="button" class="cart-btn">Add to Cart</button>
+                <button type="button" class="fav-item"><span class="material-icons">favorite</span></button>
             </footer>
         </form>
     </article>`;

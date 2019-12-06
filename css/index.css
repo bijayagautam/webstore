@@ -68,8 +68,8 @@ p{
     text-align: center;
     font-size: 1em;
     border-radius: 0.3em;
-    padding: 1em;
-    margin: 1em;
+    /* padding: 1em; */
+    margin: 1.5em;
 }
 
 .fav-item{
@@ -88,13 +88,16 @@ p{
     color: var(--semidarkcolor);
     border: none;
     text-align: center;
-    font-size: 1em;
-    padding: 1.6em;
+    font-size: 1.5em;
+    padding: 1.6em 0;
 }
 
 .qtyButton{
     color: var(--semidarkcolor);
-    margin: 0.5em;
+    margin: 0.3em;
+    border-radius: 0.3em;
+    border: none;
+    padding: 0.5em 1em;
 }
 
 /* CSS for header goes here */
@@ -147,6 +150,7 @@ p{
 .shoppingcart {
     grid-area: checkout;
     background-color: var(--semidarkcolor);
+    
 }
 
 /* CSS for main contents goes here */

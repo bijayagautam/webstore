@@ -275,8 +275,18 @@ const allProducts = [
 ];
 
 
+// Declaring global variable here
+let productQuantity = 0;
 
+let addQuantityButton = document.getElementById("addQtyButton");
+let subQuantityButton = document.getElementById("substractQtyButton");
 
+document.getElementById(`productQuantityLabel`).innerHTML = `${productQuantity}`;
+
+/*  Function: getProductAsHtmlString
+    Parameters: product, varname: NA, Type: NA
+    Return: HTML String
+    Description: return all product details as HTML */
 function getProductAsHtmlString(product) {
     return `
     <article class="product">
@@ -296,7 +306,7 @@ function getProductAsHtmlString(product) {
                   <li><input type="button" value="+" id="addQtyButton" class="qtyButton"></li>
                   <li><input type="button" value="-" id="substractQtyButton" class="qtyButton"></li>
                 </ul>
-                <label id="productQuantityLabel" class="quantity">0</label>
+                <label id="productQuantityLabel" class="quantity"></label>
                 <button type="button" class="cart-btn">Add to Cart</button>
                 <button type="button" class="fav-item"><span class="material-icons">favorite</span></button>
             </footer>
@@ -304,12 +314,57 @@ function getProductAsHtmlString(product) {
     </article>`;
 }
 
-
 const renderProductsFromArray = arr => {
     document.getElementById('products').innerHTML = arr.map(getProductAsHtmlString).join('\n');
    
 }
-  
+
+/*  Function: addQty
+    Parameters: quantity, varname: NA, Type: int
+    Return: ++quantity
+    Description: return added quantity */
+function addQty(quantity){
+    return(++quantity);
+}
+
+/*  Function: subQty
+    Parameters: quantity, varname: NA, Type: int
+    Return: 0 if quantity is less than 0 or subtracted quantity
+    Description: return substracted quantity */
+function subQty(quantity){
+    if (quantity <= 0){
+        return 0;
+    }
+    else{
+        return(--quantity);
+    }
+}
+
+/*  Function: addProductQty
+    Parameters: NA, varname: qty, Type: int
+    Return: NA
+    Description: display added quantity to productQuantityLabel */
+function addProductQty(){
+    let qty = addQty(document.getElementById(`productQuantityLabel`).innerHTML);
+    document.getElementById(`productQuantityLabel`).innerHTML = `${qty}`;
+}
+
+/*  Function: subProductQty
+    Parameters: NA, varname: qty, Type: int
+    Return: NA
+    Description: display substracted quantity to productQuantityLabel */
+function subProductQty(){
+    let qty = subQty(document.getElementById(`productQuantityLabel`).innerHTML);
+    document.getElementById(`productQuantityLabel`).innerHTML = `${qty}`;
+}
+
+
+// --------------------------------------------
+// Click Event Listener
+addQuantityButton.addEventListener("click",addProductQty)
+subQuantityButton.addEventListener("click",subProductQty)
+
+// Load Event Listener
 window.addEventListener('load', () => {
     renderProductsFromArray(allProducts);
 });

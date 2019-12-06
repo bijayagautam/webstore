@@ -6,9 +6,15 @@ const settings = {
     imgpath: '/img/'
 }
 
+const shoppingCart = [
+    {
+        productId: 100, qty: 1
+    }
+];
+
 const allProducts = [
     {
-        id: `100`,
+        id: 100,
         name: `Cargo Box Small`,
         image: `small-box.jpg`,
         description: `Small sized cargo boxes are ideal for moving, storing or shipping your smaller household items.`,
@@ -20,7 +26,7 @@ const allProducts = [
         size: `Small`,
         weight: 0.5
     },{
-        id: `101`,
+        id: 101,
         name: `Cargo Box Medium`,
         image: `medium-box.jpg`,
         description: `Medium sized cargo boxes are ideal for moving, storing or shipping your medium household items.`,
@@ -32,7 +38,7 @@ const allProducts = [
         size: `Medium`,
         weight: 0.7
     },{
-        id: `102`,
+        id: 102,
         name: `Cargo Box Large`,
         image: `large-box.jpg`,
         description: `Large sized cargo boxes are ideal for moving, storing or shipping your larger household items.`,
@@ -44,7 +50,7 @@ const allProducts = [
         size: `Large`,
         weight: 0.8
     },{
-        id: `103`,
+        id: 103,
         name: `Cargo Box Extra Large`,
         image: `extra-large-box.jpg`,
         description: `Extra large sized cargo boxes are ideal for moving, storing or shipping your extra larger household items.`,
@@ -56,7 +62,7 @@ const allProducts = [
         size: `Extra Large`,
         weight: 0.9
     },{
-        id: `104`,
+        id: 104,
         name: `Packaging Paper Tape Small`,
         image: `paper-tape-small.jpg`,
         description: `Packaging Paper Tape is ideal for moving and storage. It easily tears by hand and is self-sticking.`,
@@ -68,7 +74,7 @@ const allProducts = [
         size: `27 Metre`,
         weight: 0.2
     },{
-        id: `105`,
+        id: 105,
         name: `Packaging Paper Tape Medium`,
         image: `paper-tape-medium.jpg`,
         description: `Packaging Paper Tape is ideal for moving and storage. It easily tears by hand and is self-sticking.`,
@@ -80,7 +86,7 @@ const allProducts = [
         size: `40 Metre`,
         weight: 0.3
     },{
-        id: `106`,
+        id: 106,
         name: `Packaging Paper Tape Large`,
         image: `paper-tape-large.jpg`,
         description: `Packaging Paper Tape is ideal for moving and storage. It easily tears by hand and is self-sticking.`,
@@ -92,7 +98,7 @@ const allProducts = [
         size: `60 Metre`,
         weight: 0.4
     },{
-        id: `107`,
+        id: 107,
         name: `Packaging Paper Tape Extra Large`,
         image: `paper-tape-extra-large.jpg`,
         description: `Packaging Paper Tape is ideal for moving and storage. It easily tears by hand and is self-sticking.`,
@@ -104,7 +110,7 @@ const allProducts = [
         size: `100 Metre`,
         weight: 0.5
     },{
-        id: `108`,
+        id: 108,
         name: `Duct Tape Small`,
         image: `duct-tape-small.jpg`,
         description: `A moisture resistance tape with easy tear and conformability.`,
@@ -116,7 +122,7 @@ const allProducts = [
         size: `100 Metre`,
         weight: 0.5
     },{
-        id: `109`,
+        id: 109,
         name: `Duct Tape Large`,
         image: `duct-tape-large.jpg`,
         description: `A moisture resistance tape with easy tear and conformability.`,
@@ -128,7 +134,7 @@ const allProducts = [
         size: `200 Metre`,
         weight: 1
     },{
-        id: `110`,
+        id: 110,
         name: `Electrical Tape Small`,
         image: `electrical-tape-small.jpg`,
         description: `High temperature conformable elastic thick tape.`,
@@ -140,7 +146,7 @@ const allProducts = [
         size: `200 Metre`,
         weight: 0.5
     },{
-        id: `111`,
+        id: 111,
         name: `Electrical Tape Large`,
         image: `electrical-tape-large.jpg`,
         description: `High temperature conformable elastic thick tape.`,
@@ -152,7 +158,7 @@ const allProducts = [
         size: `150 Metre`,
         weight: 0.7
     },{
-        id: `112`,
+        id: 112,
         name: `White Tape`,
         image: `white-tape.jpg`,
         description: `Great for assembling moving and cargo boxes. No blades or knives required.`,
@@ -164,7 +170,7 @@ const allProducts = [
         size: `100 Metre`,
         weight: 0.4
     },{
-        id: `113`,
+        id: 113,
         name: `Luggage Box`,
         image: `luggage-box.jpg`,
         description: `Box handle makes it easy to use as a suitcase for travel or for shipping.`,
@@ -176,7 +182,7 @@ const allProducts = [
         size: `Large`,
         weight: 0.7
     },{
-        id: `114`,
+        id: 114,
         name: `Matress Bag Twin`,
         image: `matress-bag-twin.jpg`,
         description: `Matress bags will keep your mattresses or box springs protected against dust, soil, and light.`,
@@ -188,7 +194,7 @@ const allProducts = [
         size: `Twin`,
         weight: 0.7
     },{
-        id: `115`,
+        id: 115,
         name: `Matress Bag Queen`,
         image: `matress-bag-queen.jpg`,
         description: `Matress bags will keep your mattresses or box springs protected against dust, soil, and light.`,
@@ -200,7 +206,7 @@ const allProducts = [
         size: `Queen`,
         weight: 0.7
     },{
-        id: `116`,
+        id: 116,
         name: `Matress Bag King`,
         image: `matress-bag-king.jpg`,
         description: `Matress bags will keep your mattresses or box springs protected against dust, soil, and light.`,
@@ -212,7 +218,7 @@ const allProducts = [
         size: `King`,
         weight: 0.8
     },{
-        id: `117`,
+        id: 117,
         name: `Sofa Cover`,
         image: `sofa-cover.jpg`,
         description: `Sofa Cover is great for protecting sofas, couches and other furniture from debris`,
@@ -224,7 +230,7 @@ const allProducts = [
         size: `Large`,
         weight: 0.3
     },{
-        id: `118`,
+        id: 118,
         name: `Chair Cover`,
         image: `chair-cover.jpg`,
         description: `Chair Cover is great for protecting chairs, stools and other furniture from debris`,
@@ -236,7 +242,7 @@ const allProducts = [
         size: `Medium`,
         weight: 0.3
     },{
-        id: `119`,
+        id: 119,
         name: `Bubble Wrap Small`,
         image: `bubble-wrap-small.jpg`,
         description: `Bubble wrap is efficient way to protect and wrap fragile items such as glassware, electronics, artwork, home decor and more.`,
@@ -248,7 +254,7 @@ const allProducts = [
         size: `Small`,
         weight: 0.5
     },{
-        id: `120`,
+        id: 120,
         name: `Bubble Wrap Medium`,
         image: `bubble-wrap-medium.jpg`,
         description: `Bubble wrap is efficient way to protect and wrap fragile items such as glassware, electronics, artwork, home decor and more.`,
@@ -260,7 +266,7 @@ const allProducts = [
         size: `Medium`,
         weight: 0.9
     },{
-        id: `121`,
+        id: 121,
         name: `Bubble Wrap Large`,
         image: `bubble-wrap-large.jpg`,
         description: `Bubble wrap is efficient way to protect and wrap fragile items such as glassware, electronics, artwork, home decor and more.`,
@@ -277,9 +283,11 @@ const allProducts = [
 
 // Declaring global variable here
 let productQuantity = 0;
+let qty;
 
 let addQuantityButton = document.getElementById("addQtyButton");
 let subQuantityButton = document.getElementById("substractQtyButton");
+let addToCartButton = document.getElementById("cartButton");
 
 document.getElementById(`productQuantityLabel`).innerHTML = `${productQuantity}`;
 
@@ -316,7 +324,7 @@ function getProductAsHtmlString(product) {
 
 const renderProductsFromArray = arr => {
     document.getElementById('products').innerHTML = arr.map(getProductAsHtmlString).join('\n');
-   
+    
 }
 
 /*  Function: addQty
@@ -345,7 +353,7 @@ function subQty(quantity){
     Return: NA
     Description: display added quantity to productQuantityLabel */
 function addProductQty(){
-    let qty = addQty(document.getElementById(`productQuantityLabel`).innerHTML);
+    qty = addQty(document.getElementById(`productQuantityLabel`).innerHTML);
     document.getElementById(`productQuantityLabel`).innerHTML = `${qty}`;
 }
 
@@ -354,8 +362,29 @@ function addProductQty(){
     Return: NA
     Description: display substracted quantity to productQuantityLabel */
 function subProductQty(){
-    let qty = subQty(document.getElementById(`productQuantityLabel`).innerHTML);
+    qty = subQty(document.getElementById(`productQuantityLabel`).innerHTML);
     document.getElementById(`productQuantityLabel`).innerHTML = `${qty}`;
+}
+
+/*  Function: addItemToCart
+    Parameters: productId:Object
+    Return: productId, qty
+    Description: Add productId and quantity to cart */
+const addItemToCart = productId => {
+    const cartItem = shoppingCart.find(item => item.productId == productId);
+    if (cartItem) {
+        cartItem.qty++;
+        alert(`You added ${qty} item(s) to your shopping cart.`);
+    } else {
+        shoppingCart.push({productId: productId, qty: 1});
+        alert(`You added ${qty} item(s) ${productId} to your shopping cart.`);
+    }  
+}
+
+function getItemAddedToCartDetail(){
+    qty = document.getElementById(`productQuantityLabel`).innerHTML;
+    let pId = 101; //test product id - change it
+    addItemToCart(pId);
 }
 
 
@@ -363,8 +392,10 @@ function subProductQty(){
 // Click Event Listener
 addQuantityButton.addEventListener("click",addProductQty)
 subQuantityButton.addEventListener("click",subProductQty)
+addToCartButton.addEventListener("click",getItemAddedToCartDetail)
+
 
 // Load Event Listener
 window.addEventListener('load', () => {
-    renderProductsFromArray(allProducts);
+    // renderProductsFromArray(allProducts);
 });

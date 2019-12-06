@@ -288,6 +288,7 @@ let qty;
 let addQuantityButton = document.getElementById("addQtyButton");
 let subQuantityButton = document.getElementById("substractQtyButton");
 let addToCartButton = document.getElementById("cartButton");
+let addToFavItem = document.getElementById("favouriteItem");
 
 document.getElementById(`productQuantityLabel`).innerHTML = `${productQuantity}`;
 
@@ -324,7 +325,7 @@ function getProductAsHtmlString(product) {
 
 const renderProductsFromArray = arr => {
     document.getElementById('products').innerHTML = arr.map(getProductAsHtmlString).join('\n');
-    
+
 }
 
 /*  Function: addQty
@@ -387,13 +388,23 @@ function getItemAddedToCartDetail(){
     addItemToCart(pId);
 }
 
+function addItemAsFavourite(){
+    let favItem = document.getElementById(`favouriteItem`).style.color;
+    if(favItem == `red`){
+        document.getElementById(`favouriteItem`).style.color = "rgb(167, 204, 247)";
+        alert(`You removed your favourite item.`);
+    }else{
+        document.getElementById(`favouriteItem`).style.color = "red";
+        alert(`You added this item as a favourite.`);
+    }
+}
 
 // --------------------------------------------
 // Click Event Listener
 addQuantityButton.addEventListener("click",addProductQty)
 subQuantityButton.addEventListener("click",subProductQty)
 addToCartButton.addEventListener("click",getItemAddedToCartDetail)
-
+addToFavItem.addEventListener("click",addItemAsFavourite)
 
 // Load Event Listener
 window.addEventListener('load', () => {

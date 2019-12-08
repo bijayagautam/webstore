@@ -33,7 +33,7 @@
 
     <main class="main-content">
       <!-- Filtering and search product form -->
-      <form class="search-area">
+      <form class="search-area" id="searchArea">
         <h1>Product Search</h1>
         <fieldset class="search-form">
           <label for="search">Search by Product Name:</label>
@@ -54,8 +54,14 @@
         </fieldset>
       </form>
 
-      <section>
+      <section class="search-area">
         <h2>Search Results <small id="numResults">(5 results)</small></h2>
+        <label for="sortOrder">Sort Product by:
+            <select name="sort" id="sortOrder">
+              <option value="nameAsc" selected>Name Starts with A to Z</option>
+              <option value="nameDesc">Name Starts with Z to A</option>
+            </select>
+        </label>
       </section>
 
       <!-- All products -->

@@ -324,6 +324,9 @@ function getProductAsHtmlString(product) {
 }
 
 const renderProductsFromArray = arr => {
+    const sortBy = document.getElementById('sortOrder').value;
+    arr = loadProductsByOrder(arr, sortBy);
+
     if (arr.length > 0) {
         document.getElementById('products').innerHTML = arr.map(getProductAsHtmlString).join('\n'); 
     } else {
@@ -337,13 +340,30 @@ const submitFilterForm = event => {
     runFilterTool(event.target.form);
 }
 
+const sortProducts = event => {
+    runFilterTool(document.getElementById('searchArea'));
+}
+
+// Sorting Products by alphabet
+const loadProductsByOrder = (arrToSort, criteria) => {
+    const sortedProducts = arrToSort.slice();
+    if (criteria == 'nameAsc') {
+      // A to Z
+      sortedProducts.sort((a, b) => a.name.localeCompare(b.name));
+    } else if (criteria == 'nameDesc') {
+      // Z to A
+      sortedProducts.sort((a, b) => b.name.localeCompare(a.name));
+    }
+    return sortedProducts;
+}
+
 const runFilterTool = theForm => {
     const productNameToSearch = theForm.elements.productName.value;
     const productCategoryToSearch = theForm.elements.categoryName.value;  
     const filteredProducts = allProducts
       .filter(p => p.name.toLowerCase().includes( productNameToSearch.trim().toLowerCase() ))
       .filter(p => p.category == productCategoryToSearch || productCategoryToSearch == "All");
-
+    
     renderProductsFromArray(filteredProducts);
 }
 
@@ -434,5 +454,8 @@ window.addEventListener('load', () => {
     document.getElementById('productName').addEventListener('input', submitFilterForm);
     //Searching product by product category
     document.getElementById('categoryName').addEventListener('change', submitFilterForm);
+
+    //Sorting
+    document.getElementById('sortOrder').addEventListener('change', sortProducts);
 
 });

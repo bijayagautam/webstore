@@ -6,6 +6,7 @@
     --semidarkcolor: #023632;
     --darkcolor: #cc4e38;
     --superlightcolor: rgb(167, 204, 247);
+    --soldoutlightcolor: rgb(199, 194, 194);
     --sansserif: 'Roboto', sans-serif;
     --paragraphFont: 'Raleway', sans-serif;
 }
@@ -181,6 +182,10 @@ p{
     margin: 0.5em 0;
 }
 
+.product.outofstock {
+    color: var(--soldoutlightcolor);
+}
+
 .footer-product{
     padding: 1em;
     display: grid;
@@ -210,6 +215,22 @@ p{
 }
 .social-media{
     padding: 2em 1em;    
+}
+
+
+.promotionalItem {
+    display: inline-block;
+    font-size: 0.7em;
+    font-weight: bold;
+    vertical-align: top;
+    padding: 0.30em 0.8em;
+    border-radius: 0.25em;
+    background-color: rgb(211, 193, 193);
+    color: white;
+}
+
+.promotionalItem.urgent {
+    background-color: crimson;
 }
 
 /* Media Query Goes Here--- */

@@ -19,7 +19,7 @@ const allProducts = [
         image: `small-box.jpg`,
         description: `Small sized cargo boxes are ideal for moving, storing or shipping your smaller household items.`,
         price: 1.99,
-        quantity: 200,
+        quantity: 0,
         available: { online: true, store: true },
         shipping: { free: false, standard: true},
         category: `Box`,
@@ -297,12 +297,21 @@ document.getElementById(`productQuantityLabel`).innerHTML = `${productQuantity}`
     Return: HTML String
     Description: return all product details as HTML */
 function getProductAsHtmlString(product) {
+    let promotionalItem = ``;
+    let productStock = ``;
+    if (product.quantity <= 0) {
+        promotionalItem = `<small class="promotionalItem">Sold out</small>`;
+        productStock = `outofstock`;
+    } else if (product.quantity > 100) {
+        promotionalItem = `<small class="promotionalItem urgent">10% OFF</small>`;
+    }
+
     return `
-    <article class="product">
+    <article class="product ${(product.category) ? `cat-${product.category}` : ''} ${productStock}">
         <header>
             <img src="${settings.imgpath + product.image}" alt="${product.name}">
         </header>
-        <a href="#"><h3>${product.name}</h3></a>
+        <a href="#"><h3 id="name">${product.name} ${promotionalItem}</h3></a>
         <p>${product.description}</p>
         <form>
             <ul>

@@ -381,7 +381,7 @@ const runFilterTool = theForm => {
     Parameters: quantity, varname: NA, Type: int
     Return: ++quantity
     Description: return added quantity */
-function addQty(quantity){
+const addQty = quantity => {
     return(++quantity);
 }
 
@@ -389,7 +389,7 @@ function addQty(quantity){
     Parameters: quantity, varname: NA, Type: int
     Return: 0 if quantity is less than 0 or subtracted quantity
     Description: return substracted quantity */
-function subQty(quantity){
+const subQty = quantity => {
     if (quantity <= 0){
         return 0;
     }
@@ -458,7 +458,7 @@ addToFavItem.addEventListener("click",addItemAsFavourite)
 // Load Event Listener
 window.addEventListener('load', () => {
     //Rendering all products on page load
-    renderProductsFromArray(allProducts);
+    // renderProductsFromArray(allProducts);
 
     //Searching product by product name
     document.getElementById('productName').addEventListener('input', submitFilterForm);

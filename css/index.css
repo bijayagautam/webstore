@@ -160,7 +160,7 @@ p{
 
 .search-area{
     color: rgb(27, 8, 97);
-    display: none;
+    /* display: none; */
 }
 
 .search-form{
@@ -177,14 +177,14 @@ p{
     max-width: 30em;
     box-shadow: 0.5em 0.5em 4em rgb(202, 201, 201);
     border-radius: 0.2em;
-    margin: 1em;
+    margin: 0.5em 0;
 }
 
 .footer-product{
     padding: 1em;
     display: grid;
     grid-template-columns: auto auto auto auto auto;
-    /* grid-gap: 1em; */
+    grid-gap: 0.2em;
 }
 
 .main-footer{

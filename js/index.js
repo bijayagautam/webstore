@@ -312,12 +312,12 @@ function getProductAsHtmlString(product) {
             <footer class="footer-product">
                 <data value="1.99" class="price"><label>$1.99</label></data>
                 <ul>
-                  <li><input type="button" value="+" id="addQtyButton" class="qtyButton"></li>
-                  <li><input type="button" value="-" id="substractQtyButton" class="qtyButton"></li>
+                <li><input type="button" value="+" id="addQtyButton" class="qtyButton"></li>
+                <li><input type="button" value="-" id="substractQtyButton" class="qtyButton"></li>
                 </ul>
                 <label id="productQuantityLabel" class="quantity"></label>
-                <button type="button" class="cart-btn">Add to Cart</button>
-                <button type="button" class="fav-item"><span class="material-icons">favorite</span></button>
+                <button id="cartButton" type="button" class="cart-btn">Add to Cart</button>
+                <button id="favouriteItem" type="button" class="fav-item"><span class="material-icons">favorite</span></button>
             </footer>
         </form>
     </article>`;
@@ -336,9 +336,11 @@ const submitFilterForm = event => {
 }
 
 const runFilterTool = theForm => {
-    const productNameToSearch = theForm.elements.productName.value;    
+    const productNameToSearch = theForm.elements.productName.value;
+    const productCategoryToSearch = theForm.elements.categoryName.value;  
     const filteredProducts = allProducts
-      .filter(p => p.name.toLowerCase().includes( productNameToSearch.trim().toLowerCase() ));
+      .filter(p => p.name.toLowerCase().includes( productNameToSearch.trim().toLowerCase() ))
+      .filter(p => p.category == productCategoryToSearch || productCategoryToSearch == "All");
 
     renderProductsFromArray(filteredProducts);
 }
@@ -428,5 +430,7 @@ window.addEventListener('load', () => {
 
     //Searching product by product name
     document.getElementById('productName').addEventListener('input', submitFilterForm);
+    //Searching product by product category
+    document.getElementById('categoryName').addEventListener('change', submitFilterForm);
 
 });

@@ -36,19 +36,20 @@
       <form class="search-area">
         <h1>Product Search</h1>
         <fieldset class="search-form">
-          <label for="search">Search by Product Name</label>
+          <label for="search">Search by Product Name:</label>
           <input type="text" name="find" id="productName">
           <br>
           <br>
-          <label for="sort">Sort by Category</label>
-          <select name="sort" id="sort">
-            <option value="box">Box</option>
-            <option value="tape">Tape</option>
-            <option value="bag">Bag</option>
-            <option value="cover">Cover</option>
-            <option value="wrap">Wrap</option>
+          <label for="category">Category:</label>
+          <select name="categoryName" id="categoryName">
+            <option value="All" selected>All Products</option>
+            <option value="Box">Box</option>
+            <option value="Tape">Tape</option>
+            <option value="Bag">Bag</option>
+            <option value="Cover">Cover</option>
+            <option value="Wrap">Wrap</option>
           </select>
-          <input type="button" value="Show All Products" id="showButton">
+          <!-- <input type="button" value="Show All Products" id="showButton"> -->
 
         </fieldset>
       </form>
@@ -58,6 +59,29 @@
         <h2>Search Results</h2>
         <div id="products">
           <!-- All product goes here, pulled as html string from index.js -->
+          <article class="product">
+              <header>
+                  <img src="/img/luggage-box.jpg" alt="luggage box">
+              </header>
+              <a href="#"><h3>Luggage Box</h3></a>
+              <p>Box handle makes it easy to use as a suitcase for travel or for shipping.</p>
+              <form>
+                  <ul>
+                      <li><label><input type="radio" name="size" value="o"> <span>Ship to home</span></label></li>
+                      <li><label><input type="radio" name="size" value="s"> <span>Pick up in store</span></label></li>
+                  </ul>
+                  <footer class="footer-product">
+                      <data value="6.99" class="price"><label>$6.99</label></data>
+                      <ul>
+                        <li><input type="button" value="+" id="addQtyButton" class="qtyButton"></li>
+                        <li><input type="button" value="-" id="substractQtyButton" class="qtyButton"></li>
+                      </ul>
+                      <label id="productQuantityLabel" class="quantity"></label>
+                      <button id="cartButton" type="button" class="cart-btn">Add to Cart</button>
+                      <button id="favouriteItem" type="button" class="fav-item"><span class="material-icons">favorite</span></button>
+                  </footer>
+              </form>
+          </article>
         </div>
       </section>
     </main>

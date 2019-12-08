@@ -299,6 +299,7 @@ document.getElementById(`productQuantityLabel`).innerHTML = `${productQuantity}`
 function getProductAsHtmlString(product) {
     let promotionalItem = ``;
     let productStock = ``;
+    let addToCart = `<button data-productid="${product.id}" id="cartButton" type="button" class="cart-btn">Add to Cart</button>`
     if (product.quantity <= 0) {
         promotionalItem = `<small class="promotionalItem">Sold out</small>`;
         productStock = `outofstock`;
@@ -319,13 +320,13 @@ function getProductAsHtmlString(product) {
                 <li><label><input type="radio" name="size" value="s"> <span>Pick up in store</span></label></li>
             </ul>
             <footer class="footer-product">
-                <data value="1.99" class="price"><label>$1.99</label></data>
+                <data value="${product.price}" class="price"><label>$${product.price}</label></data>
                 <ul>
                 <li><input type="button" value="+" id="addQtyButton" class="qtyButton"></li>
                 <li><input type="button" value="-" id="substractQtyButton" class="qtyButton"></li>
                 </ul>
                 <label id="productQuantityLabel" class="quantity"></label>
-                <button id="cartButton" type="button" class="cart-btn">Add to Cart</button>
+                ${addToCart}
                 <button id="favouriteItem" type="button" class="fav-item"><span class="material-icons">favorite</span></button>
             </footer>
         </form>

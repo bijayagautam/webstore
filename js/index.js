@@ -324,8 +324,23 @@ function getProductAsHtmlString(product) {
 }
 
 const renderProductsFromArray = arr => {
-    document.getElementById('products').innerHTML = arr.map(getProductAsHtmlString).join('\n');
+    if (arr.length > 0) {
+        document.getElementById('products').innerHTML = arr.map(getProductAsHtmlString).join('\n'); 
+    } else {
+      document.getElementById('products').innerHTML = 'Sorry, No matching results, try fewer keywords, or try different keywords.'
+    }    
+}
 
+const submitFilterForm = event => {
+    runFilterTool(event.target.form);
+}
+
+const runFilterTool = theForm => {
+    const productNameToSearch = theForm.elements.productName.value;    
+    const filteredProducts = allProducts
+      .filter(p => p.name.toLowerCase().includes( productNameToSearch.trim().toLowerCase() ));
+
+    renderProductsFromArray(filteredProducts);
 }
 
 /*  Function: addQty
@@ -408,5 +423,10 @@ addToFavItem.addEventListener("click",addItemAsFavourite)
 
 // Load Event Listener
 window.addEventListener('load', () => {
-    // renderProductsFromArray(allProducts);
+    //Rendering all products on page load
+    renderProductsFromArray(allProducts);
+
+    //Searching product by product name
+    document.getElementById('productName').addEventListener('input', submitFilterForm);
+
 });

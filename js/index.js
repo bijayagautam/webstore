@@ -328,7 +328,9 @@ const renderProductsFromArray = arr => {
         document.getElementById('products').innerHTML = arr.map(getProductAsHtmlString).join('\n'); 
     } else {
       document.getElementById('products').innerHTML = 'Sorry, No matching results, try fewer keywords, or try different keywords.'
-    }    
+    }
+    document.getElementById('numResults').innerHTML = `(${arr.length} ${(arr.length == 1) ? 'result' : 'results'})`;
+
 }
 
 const submitFilterForm = event => {

@@ -322,8 +322,8 @@ function getProductAsHtmlString(product) {
             <footer class="footer-product">
                 <data value="${product.price}" class="price"><label>$${product.price}</label></data>
                 <ul>
-                <li><input type="button" value="+" id="addQtyButton" class="qtyButton"></li>
-                <li><input type="button" value="-" id="substractQtyButton" class="qtyButton"></li>
+                    <li><button id="addQtyButton" type="button" class="qtyButton qtyButton-add">+</button></li>
+                    <li><button id="substractQtyButton" type="button" class="qtyButton qtyButton-sub">-</button></li>
                 </ul>
                 <label id="productQuantityLabel" class="quantity"></label>
                 ${addToCart}
@@ -424,17 +424,18 @@ const addItemToCart = productId => {
     const cartItem = shoppingCart.find(item => item.productId == productId);
     if (cartItem) {
         cartItem.qty++;
-        alert(`You added ${qty} item(s) to your shopping cart.`);
     } else {
         shoppingCart.push({productId: productId, qty: 1});
-        alert(`You added ${qty} item(s) ${productId} to your shopping cart.`);
+        alert(`You added item with product id ${productId} to your shopping cart.`);
     }  
 }
 
-function getItemAddedToCartDetail(){
-    qty = document.getElementById(`productQuantityLabel`).innerHTML;
-    let pId = 101; //test product id - change it
-    addItemToCart(pId);
+const handleClickOfProducts = event => {
+    if (!event.target.matches('button.cart-btn')) {
+        return;
+    }
+    const productid = parseInt(event.target.dataset.productid);
+    addItemToCart(productid);
 }
 
 function addItemAsFavourite(){
@@ -450,15 +451,13 @@ function addItemAsFavourite(){
 
 // --------------------------------------------
 // Click Event Listener
-addQuantityButton.addEventListener("click",addProductQty)
 subQuantityButton.addEventListener("click",subProductQty)
-addToCartButton.addEventListener("click",getItemAddedToCartDetail)
 addToFavItem.addEventListener("click",addItemAsFavourite)
 
 // Load Event Listener
 window.addEventListener('load', () => {
     //Rendering all products on page load
-    // renderProductsFromArray(allProducts);
+    renderProductsFromArray(allProducts);
 
     //Searching product by product name
     document.getElementById('productName').addEventListener('input', submitFilterForm);
@@ -468,4 +467,5 @@ window.addEventListener('load', () => {
     //Sorting
     document.getElementById('sortOrder').addEventListener('change', sortProducts);
 
+    document.getElementById('products').addEventListener('click', handleClickOfProducts);
 });

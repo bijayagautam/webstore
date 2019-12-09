@@ -184,7 +184,7 @@ p{
     border-radius: 0.2em;
     border: 0 solid;
     background-color: rgb(187, 223, 205);
-    background-image: url('../img/search.svg');
+    background-image: url('img/search.svg');
     background-repeat: no-repeat;
     background-position: 0.50em;
     padding-left: 1.875em;

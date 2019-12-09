@@ -3,7 +3,7 @@
 // https://www.globalindustrial.ca/
 
 const settings = {
-    imgpath: '/img/'
+    imgpath: 'img/'
 }
 
 const shoppingCart = [

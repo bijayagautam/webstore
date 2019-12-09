@@ -110,9 +110,9 @@ p{
 
 .navbar {
     display: grid;
-    grid-template-columns: 2em  auto  2em;
-    grid-template-areas:  "menudrop logo checkout"
-                          "menu menu menu";
+    grid-template-columns: 2em  auto  2em  2em;
+    grid-template-areas:  "menudrop logo  search checkout"
+                          "menu menu menu menu";
 }
 
 .logo {
@@ -127,13 +127,14 @@ p{
     text-align: center;
     font-size: 1.6em;
     background-color: var(--semidarkcolor);
-
+    border: none;
 }
 
 .main-menu {
     grid-area: menu;
     text-align: center; 
     display: none;
+    font-size: 1.2rem;
     /* change display none on screen size change */
 }
 
@@ -152,7 +153,19 @@ p{
 .shoppingcart {
     grid-area: checkout;
     background-color: var(--semidarkcolor);
-    
+    border: none;
+    margin: 0 0.5em 0 0;
+}
+
+.search-lens {
+    grid-area: search;
+    text-align: center;
+    font-size: 1.2rem;
+    background-color: var(--semidarkcolor);
+    color: white;
+    border: none;
+    /* padding: 0.3em 0; */
+    margin: 0.2em 0;
 }
 
 /* CSS for main contents goes here */
@@ -236,8 +249,8 @@ p{
 /* Media Query Goes Here--- */
 @media screen and (min-width: 700px) {
     .navbar {
-      grid-template-columns: 3em  auto  2em;
-      grid-template-areas:  "logo menu checkout";  
+      grid-template-columns: 3em  auto  2em 2em;
+      grid-template-areas:  "logo menu search checkout";  
     }
   
     .hamburger {

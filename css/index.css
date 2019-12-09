@@ -174,16 +174,31 @@ p{
 }
 
 .search-area{
-    color: rgb(27, 8, 97);
-    /* display: none; */
+    /* color: rgb(27, 8, 97); */
+    display: none;
+}
+
+.searchbox{
+    width: 100%;
+    padding: 0.5em;
+    border-radius: 0.2em;
+    border: 0 solid;
+    background-color: rgb(187, 223, 205);
+    background-image: url('/img/search.svg');
+    background-repeat: no-repeat;
+    background-position: 0.50em;
+    padding-left: 1.875em;
 }
 
 .search-form{
-    padding: 1em;
     background-color: rgb(248, 245, 242);
     max-width: 30em;
     box-shadow: 0.5em 0.5em 4em rgb(248, 245, 242);
     border-radius: 0.2em;
+    margin: 0.5em 0;    
+    padding: 0.5em;
+    border-radius: 0.2em;
+    border: 0 solid;
 }
 
 .product {

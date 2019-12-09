@@ -458,6 +458,15 @@ function showHideMenu(){
     }
 }
 
+function showHideSearchArea(){
+    let search = document.getElementById("searchArea");
+    if (search.style.display == "block") {
+        search.style.display = "none";
+    } else {
+        search.style.display = "block";
+    }
+}
+
 
 // --------------------------------------------
 // Click Event Listener
@@ -479,5 +488,6 @@ window.addEventListener('load', () => {
 
     document.getElementById('products').addEventListener('click', handleClickOfProducts);
     document.getElementById('hamMenu').addEventListener('click', showHideMenu);
+    document.getElementById('search-icon').addEventListener('click', showHideSearchArea);
 
 });

@@ -32,7 +32,7 @@
         </ul>
 
         <form>
-          <button type="button" class="search-lens"><span class="material-icons">search</span></button>
+          <button type="button" id="search-icon" class="search-lens"><span class="material-icons">search</span></button>
         </form>
         <button class="shoppingcart"><span class="material-icons icon-theme">shopping_cart</span></button>
       </nav>
@@ -41,12 +41,9 @@
     <main class="main-content">
       <!-- Filtering and search product form -->
       <form class="search-area" id="searchArea">
-        <h1>Product Search</h1>
+        <input type="search" name="find" id="productName" class="searchbox" placeholder="Search product by name">
+        <!-- <h1>Product Search</h1> -->
         <fieldset class="search-form">
-          <label for="search">Search by Product Name:</label>
-          <input type="text" name="find" id="productName">
-          <br>
-          <br>
           <label for="category">Category:</label>
           <select name="categoryName" id="categoryName">
             <option value="All" selected>All Products</option>
@@ -56,8 +53,6 @@
             <option value="Cover">Cover</option>
             <option value="Wrap">Wrap</option>
           </select>
-          <!-- <input type="button" value="Show All Products" id="showButton"> -->
-
         </fieldset>
       </form>
 

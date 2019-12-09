@@ -145,8 +145,8 @@ p{
 }
 
 .main-menu a:hover {
-    color: var(--darkcolor);
-    background-color: var(--lightcolor);
+    color: yellow;
+    background-color: rgb(75, 99, 76);
 }
 
 .shoppingcart {

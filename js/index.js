@@ -449,6 +449,16 @@ function addItemAsFavourite(){
     }
 }
 
+function showHideMenu(){
+    let menu = document.getElementById("mainMenu");
+    if (menu.style.display == "block") {
+        menu.style.display = "none";
+    } else {
+        menu.style.display = "block";
+    }
+}
+
+
 // --------------------------------------------
 // Click Event Listener
 subQuantityButton.addEventListener("click",subProductQty)
@@ -468,4 +478,6 @@ window.addEventListener('load', () => {
     document.getElementById('sortOrder').addEventListener('change', sortProducts);
 
     document.getElementById('products').addEventListener('click', handleClickOfProducts);
+    document.getElementById('hamMenu').addEventListener('click', showHideMenu);
+
 });

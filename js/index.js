@@ -342,7 +342,7 @@ const renderProductsFromArray = arr => {
     } else {
       document.getElementById('products').innerHTML = 'Sorry, No matching results, try fewer keywords, or try different keywords.'
     }
-    document.getElementById('numResults').innerHTML = `(${arr.length} ${(arr.length == 1) ? 'result' : 'results'})`;
+    document.getElementById('numResults').innerHTML = `(${arr.length} ${(arr.length == 1) ? 'item' : 'items'})`;
 
 }
 

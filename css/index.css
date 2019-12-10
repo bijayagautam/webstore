@@ -55,7 +55,10 @@ h3{
 p{
     padding: 1em;
     font-family: var(--paragraphFont);
-    line-height: 1.2em;
+    font-weight: normal;
+    font-size: .9rem;
+    line-height: 1.5;
+    margin-bottom: 1.25rem;
 }
 
 /* CSS for button and icons */
@@ -184,7 +187,7 @@ p{
     border-radius: 0.2em;
     border: 0 solid;
     background-color: rgb(187, 223, 205);
-    background-image: url('img/search.svg');
+    background-image: url('/img/search.svg');
     background-repeat: no-repeat;
     background-position: 0.50em;
     padding-left: 1.875em;

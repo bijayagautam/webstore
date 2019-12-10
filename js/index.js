@@ -329,11 +329,11 @@ function getProductAsHtmlString(product) {
         <a href="#"><h3 id="name">${product.name} ${promotionalItem}</h3></a>
         <p>${product.description}</p>
         <form>
-            <ul class="ship-pickup">
-                <li><label><input type="radio" name="size" value="o"> <span>Ship to home</span></label></li>
-                <li><label><input type="radio" name="size" value="s"> <span>Pick up in store</span></label></li>
-            </ul>
             <footer class="footer-product" data-productid="${product.id}">
+                <ul class="ship-pickup">
+                    <li><label><input type="radio" name="size" value="o" class="shipHome"> <span>Ship to home</span></label></li>
+                    <li><label><input type="radio" name="size" value="s" class="inStore"> <span>Pick up in store</span></label></li>
+                </ul>
                 <data value="${product.price}" class="price"><label>$${product.price}</label></data>
                 <ul>
                     <li><button id="addQtyButton" type="button" class="qtyButton qtyButton-add">+</button></li>
@@ -357,6 +357,42 @@ const renderProductsFromArray = arr => {
     }
     document.getElementById('numResults').innerHTML = `(${arr.length} ${(arr.length == 1) ? 'item' : 'items'})`;
 
+}
+
+const handleClickOfProducts = event => {
+    const productid = parseInt(event.target.closest(`footer`).dataset.productid);
+    if (event.target.matches('button.cart-btn')) {
+        addItemToCart(productid);
+        qty = document.querySelector(`#productQuantityLabel_${productid}`).innerHTML;
+        alert(`You added ${qty} product(s) with product name and id ${productid} to cart.`);
+
+    } else if (event.target.matches(`.qtyButton.qtyButton-add`)){
+        // find the product first using the product id
+        // const newQty = allProducts.find(p => p.id == productid).quantityToAdd++;
+        // document.querySelector(`#productQuantityLabel_${productid}`).innerHTML = `${newQty}`;
+        // // console.log(productid)
+
+        //Calling function to add quantity and assigning new quantity to product quantity label
+        qty = addQty(document.querySelector(`#productQuantityLabel_${productid}`).innerHTML);
+        document.querySelector(`#productQuantityLabel_${productid}`).innerHTML = `${qty}`;
+
+    }else if (event.target.matches(`.qtyButton.qtyButton-sub`)){
+        //Calling function to substract quantity and assigning new quantity to product quantity label
+        qty = subQty(document.querySelector(`#productQuantityLabel_${productid}`).innerHTML);
+        document.querySelector(`#productQuantityLabel_${productid}`).innerHTML = `${qty}`;
+    }else if (event.target.matches(`button span`)){
+        let favItem = document.querySelector(`#favouriteItem_${productid}`).style.color;
+        if (favItem == `red`) {
+            document.querySelector(`#favouriteItem_${productid}`).style.color = "rgb(167, 204, 247)";
+            console.log(`Removed as Favourite.`)
+        } else {
+            document.querySelector(`#favouriteItem_${productid}`).style.color = "red";
+            console.log(`Added as Favourite.`)
+        }
+    }
+    else {
+        return;
+    }
 }
 
 const submitFilterForm = event => {
@@ -424,40 +460,6 @@ const addItemToCart = productId => {
     }
 }
 
-const handleClickOfProducts = event => {
-    const productid = parseInt(event.target.closest(`footer`).dataset.productid);
-    if (event.target.matches('button.cart-btn')) {
-        addItemToCart(productid);
-        qty = document.querySelector(`#productQuantityLabel_${productid}`).innerHTML;
-        alert(`You added ${qty} product(s) with product name and id ${productid} to cart.`);
-
-    } else if (event.target.matches(`.qtyButton.qtyButton-add`)){
-        // find the product first using the product id
-        // const newQty = allProducts.find(p => p.id == productid).quantityToAdd++;
-        // document.querySelector(`#productQuantityLabel_${productid}`).innerHTML = `${newQty}`;
-        // // console.log(productid)
-
-        //Calling function to add quantity and assigning new quantity to product quantity label
-        qty = addQty(document.querySelector(`#productQuantityLabel_${productid}`).innerHTML);
-        document.querySelector(`#productQuantityLabel_${productid}`).innerHTML = `${qty}`;
-
-    }else if (event.target.matches(`.qtyButton.qtyButton-sub`)){
-        //Calling function to substract quantity and assigning new quantity to product quantity label
-        qty = subQty(document.querySelector(`#productQuantityLabel_${productid}`).innerHTML);
-        document.querySelector(`#productQuantityLabel_${productid}`).innerHTML = `${qty}`;
-    }else if (event.target.matches(`button.fav-item`)){
-        let favItem = document.querySelector(`#favouriteItem_${productid}`).style.color;
-        if (favItem == `red`) {
-            document.querySelector(`#favouriteItem_${productid}`).style.color = "rgb(167, 204, 247)";
-        } else {
-            document.querySelector(`#favouriteItem_${productid}`).style.color = "red";
-        }
-    }
-    else {
-        return;
-    }
-}
-
 function showHideMenu() {
     let menu = document.getElementById("mainMenu");
     if (menu.style.display == "block") {
@@ -469,10 +471,31 @@ function showHideMenu() {
 
 function showHideSearchArea() {
     let search = document.getElementById("searchArea");
+    let dropMenu = document.getElementById("mainMenu");
     if (search.style.display == "block") {
         search.style.display = "none";
+        dropMenu.style.display = "none";
+
     } else {
         search.style.display = "block";
+        dropMenu.style.display = "none";
+
+    }
+}
+
+function showHideCheckout() {
+    let cart = document.getElementById("viewCart");
+    let prod = document.getElementById("products");
+    let totalSort = document.getElementById("total-sort");
+
+    if (cart.style.display == "block") {
+        cart.style.display = "none";
+        prod.style.display = "block";
+        totalSort.style.display = "grid";
+    } else {
+        cart.style.display = "block";
+        prod.style.display = "none";
+        totalSort.style.display = "none";
     }
 }
 
@@ -480,7 +503,7 @@ function showHideSearchArea() {
 window.addEventListener('load', () => {
     //Rendering all products on page load
     renderProductsFromArray(allProducts);
-    
+
     //Searching product by product name
     document.getElementById('productName').addEventListener('input', submitFilterForm);
     //Searching product by product category
@@ -492,5 +515,6 @@ window.addEventListener('load', () => {
     document.getElementById('products').addEventListener('click', handleClickOfProducts);
     document.getElementById('hamMenu').addEventListener('click', showHideMenu);
     document.getElementById('search-icon').addEventListener('click', showHideSearchArea);
+    document.getElementById('check-cart').addEventListener('click', showHideCheckout);
 
 });

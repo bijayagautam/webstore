@@ -34,7 +34,7 @@
         <form>
           <button type="button" id="search-icon" class="search-lens"><span class="material-icons icon-theme">search</span></button>
         </form>
-        <button class="shoppingcart"><span class="material-icons icon-theme">shopping_cart</span></button>
+        <button id="check-cart" class="shoppingcart"><span class="material-icons icon-theme">shopping_cart</span></button>
       </nav>
     </header>
 
@@ -56,7 +56,26 @@
         </fieldset>
       </form>
 
-      <section class="search-area sort-area">
+      <section class="view-cart" id="viewCart">
+        <h2>Shopping Cart</h2>
+        <hr>
+          <ul class="checkout-details">
+            <li><label>Product Id</label></li>
+            <li><label>Qty</label></li>
+            <li><label>Price</label></li>
+            <li><label>Total</label></li>  
+            
+            <li><label id="check-productid"></label></li>
+            <li><label id="check-qty"></label></li>
+            <li><label id="check-price"></label></li>
+            <li><label id="check-total"></label></li>    
+          </ul>
+        <hr>
+        <p>Your Cart is currently empty.</p>
+        <hr>
+      </section>
+
+      <section class="search-area sort-area" id="total-sort">
         <h2>Total <small id="numResults">(0 items)</small></h2>
         <label for="sortOrder">Sort Product by:
             <select name="sort" id="sortOrder" class="sort-dropdown">

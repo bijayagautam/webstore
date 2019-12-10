@@ -82,8 +82,9 @@ p{
     background-color: white;
     color: var(--superlightcolor);
     border: none;
+    outline: none;
 }
-
+    
 .price{
     font-size: 1.5em;
     text-align: center;
@@ -206,6 +207,17 @@ p{
     border: 0 solid;
 }
 
+.view-cart{
+    display: none;
+}
+
+.checkout-details{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    list-style: none;
+    font-size: 0.8em;
+    text-align: center;
+}
 .category-dropdown{
     width:100%;  
     background: rgb(187, 223, 205);
@@ -253,6 +265,7 @@ p{
     font-family: var(--paragraphFont);
     font-size: 0.9rem;
     font-weight: bold;
+    grid-column: 1/6;
 }
 
 .footer-product{

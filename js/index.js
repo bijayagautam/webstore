@@ -350,7 +350,6 @@ function getProductAsHtmlString(product) {
 const renderProductsFromArray = arr => {
     const sortBy = document.getElementById('sortOrder').value;
     arr = loadProductsByOrder(arr, sortBy);
-    console.log(arr)
     if (arr.length > 0) {
         document.getElementById('products').innerHTML = arr.map(getProductAsHtmlString).join('\n');
     } else {
@@ -422,28 +421,30 @@ const addItemToCart = productId => {
         cartItem.qty++;
     } else {
         shoppingCart.push({ productId: productId, qty: 1 });
-        alert(`You added item with product id ${productId} to your shopping cart.`);
     }
 }
 
 const handleClickOfProducts = event => {
     const productid = parseInt(event.target.closest(`footer`).dataset.productid);
     if (event.target.matches('button.cart-btn')) {
-        console.log('clicked', productid)
         addItemToCart(productid);
+        qty = document.querySelector(`#productQuantityLabel_${productid}`).innerHTML;
+        alert(`You added ${qty} product(s) with product name and id ${productid} to cart.`);
+
     } else if (event.target.matches(`.qtyButton.qtyButton-add`)){
         // find the product first using the product id
-        const newQty = allProducts.find(p => p.id == productid).quantityToAdd++;
-        document.querySelector(`#productQuantityLabel_${productid}`).innerHTML = `${newQty}`;
-        console.log(productid)
+        // const newQty = allProducts.find(p => p.id == productid).quantityToAdd++;
+        // document.querySelector(`#productQuantityLabel_${productid}`).innerHTML = `${newQty}`;
+        // // console.log(productid)
+
+        //Calling function to add quantity and assigning new quantity to product quantity label
+        qty = addQty(document.querySelector(`#productQuantityLabel_${productid}`).innerHTML);
+        document.querySelector(`#productQuantityLabel_${productid}`).innerHTML = `${qty}`;
 
     }else if (event.target.matches(`.qtyButton.qtyButton-sub`)){
-        //Neet to work on substracting qty
-        // console.log('Substract clicked')
-        // newQty = allProducts.find(p => p.id == productid).quantityToAdd--;
-        // document.querySelector(`#productQuantityLabel_${productid}`).innerHTML = `${newQty}`;
-        // console.log('Substract clicked')
-        return;
+        //Calling function to substract quantity and assigning new quantity to product quantity label
+        qty = subQty(document.querySelector(`#productQuantityLabel_${productid}`).innerHTML);
+        document.querySelector(`#productQuantityLabel_${productid}`).innerHTML = `${qty}`;
     }
     else {
         return;
@@ -482,7 +483,6 @@ function showHideSearchArea() {
 // Load Event Listener
 window.addEventListener('load', () => {
     //Rendering all products on page load
-    console.log('load')
     renderProductsFromArray(allProducts);
 
     let addToFavItem = document.getElementById("favouriteItem");

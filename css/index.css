@@ -64,6 +64,7 @@ p{
 /* CSS for button and icons */
 .icon-theme{
     color: var(--lightcolor);
+    font-size: 1.5em;
 }
 
 .cart-btn{

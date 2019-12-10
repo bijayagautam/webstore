@@ -129,8 +129,9 @@ p{
     grid-area: menudrop;
     text-align: center;
     font-size: 1.6em;
-    background-color: var(--semidarkcolor);
+    background-color: transparent;
     border: none;
+    outline: none;
 }
 
 .main-menu {
@@ -155,8 +156,9 @@ p{
 
 .shoppingcart {
     grid-area: checkout;
-    background-color: var(--semidarkcolor);
+    background-color: transparent;
     border: none;
+    outline: none;
     margin: 0 0.5em 0 0;
 }
 
@@ -164,10 +166,10 @@ p{
     grid-area: search;
     text-align: center;
     font-size: 1.2rem;
-    background-color: var(--semidarkcolor);
+    background-color: transparent;
     color: white;
     border: none;
-    /* padding: 0.3em 0; */
+    outline: none;
     margin: 0.2em 0;
 }
 

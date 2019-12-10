@@ -217,6 +217,14 @@ p{
     color: var(--soldoutlightcolor);
 }
 
+.ship-pickup {
+    display: grid;
+    grid-template-columns: auto auto;
+    font-family: var(--paragraphFont);
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
 .footer-product{
     padding: 1em;
     display: grid;

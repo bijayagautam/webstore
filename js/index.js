@@ -315,7 +315,7 @@ function getProductAsHtmlString(product) {
         <a href="#"><h3 id="name">${product.name} ${promotionalItem}</h3></a>
         <p>${product.description}</p>
         <form>
-            <ul>
+            <ul class="ship-pickup">
                 <li><label><input type="radio" name="size" value="o"> <span>Ship to home</span></label></li>
                 <li><label><input type="radio" name="size" value="s"> <span>Pick up in store</span></label></li>
             </ul>

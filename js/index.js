@@ -341,7 +341,7 @@ function getProductAsHtmlString(product) {
                 </ul>
                 <label id="productQuantityLabel_${product.id}" class="quantity">${product.quantityToAdd}</label>
                 <button data-productid="${product.id}" id="cartButton" type="button" class="cart-btn">Add to Cart</button>
-                <button id="favouriteItem" type="button" class="fav-item"><span class="material-icons">favorite</span></button>
+                <button id="favouriteItem_${product.id}" type="button" class="fav-item"><span class="material-icons">favorite</span></button>
             </footer>
         </form>
     </article>`;
@@ -445,20 +445,16 @@ const handleClickOfProducts = event => {
         //Calling function to substract quantity and assigning new quantity to product quantity label
         qty = subQty(document.querySelector(`#productQuantityLabel_${productid}`).innerHTML);
         document.querySelector(`#productQuantityLabel_${productid}`).innerHTML = `${qty}`;
+    }else if (event.target.matches(`button.fav-item`)){
+        let favItem = document.querySelector(`#favouriteItem_${productid}`).style.color;
+        if (favItem == `red`) {
+            document.querySelector(`#favouriteItem_${productid}`).style.color = "rgb(167, 204, 247)";
+        } else {
+            document.querySelector(`#favouriteItem_${productid}`).style.color = "red";
+        }
     }
     else {
         return;
-    }
-}
-
-function addItemAsFavourite() {
-    let favItem = document.getElementById(`favouriteItem`).style.color;
-    if (favItem == `red`) {
-        document.getElementById(`favouriteItem`).style.color = "rgb(167, 204, 247)";
-        alert(`You removed your favourite item.`);
-    } else {
-        document.getElementById(`favouriteItem`).style.color = "red";
-        alert(`You added this item as a favourite.`);
     }
 }
 
@@ -484,13 +480,7 @@ function showHideSearchArea() {
 window.addEventListener('load', () => {
     //Rendering all products on page load
     renderProductsFromArray(allProducts);
-
-    let addToFavItem = document.getElementById("favouriteItem");
-
-    // --------------------------------------------
-    // Click Event Listener
-    addToFavItem.addEventListener("click", addItemAsFavourite)
-
+    
     //Searching product by product name
     document.getElementById('productName').addEventListener('input', submitFilterForm);
     //Searching product by product category

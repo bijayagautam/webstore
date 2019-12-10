@@ -19,261 +19,283 @@ const allProducts = [
         image: `small-box.jpg`,
         description: `Small sized cargo boxes are ideal for moving, storing or shipping your smaller household items.`,
         price: 1.99,
-        quantity: 0,
+        stocks: 0,
+        quantityToAdd: 0,
         available: { online: true, store: true },
-        shipping: { free: false, standard: true},
+        shipping: { free: false, standard: true },
         category: `Box`,
         size: `Small`,
         weight: 0.5
-    },{
+    }, {
         id: 101,
         name: `Cargo Box Medium`,
         image: `medium-box.jpg`,
         description: `Medium sized cargo boxes are ideal for moving, storing or shipping your medium household items.`,
         price: 2.99,
-        quantity: 150,
+        stocks: 150,
+        quantityToAdd: 0,
         available: { online: true, store: true },
-        shipping: { free: false, standard: true},
+        shipping: { free: false, standard: true },
         category: `Box`,
         size: `Medium`,
         weight: 0.7
-    },{
+    }, {
         id: 102,
         name: `Cargo Box Large`,
         image: `large-box.jpg`,
         description: `Large sized cargo boxes are ideal for moving, storing or shipping your larger household items.`,
         price: 3.99,
-        quantity: 125,
+        stocks: 125,
+        quantityToAdd: 0,
         available: { online: true, store: true },
-        shipping: { free: false, standard: true},
+        shipping: { free: false, standard: true },
         category: `Box`,
         size: `Large`,
         weight: 0.8
-    },{
+    }, {
         id: 103,
         name: `Cargo Box Extra Large`,
         image: `extra-large-box.jpg`,
         description: `Extra large sized cargo boxes are ideal for moving, storing or shipping your extra larger household items.`,
         price: 4.99,
-        quantity: 100,
+        stocks: 100,
+        quantityToAdd: 0,
         available: { online: true, store: true },
-        shipping: { free: false, standard: true},
+        shipping: { free: false, standard: true },
         category: `Box`,
         size: `Extra Large`,
         weight: 0.9
-    },{
+    }, {
         id: 104,
         name: `Packaging Paper Tape Small`,
         image: `paper-tape-small.jpg`,
         description: `Packaging Paper Tape is ideal for moving and storage. It easily tears by hand and is self-sticking.`,
         price: 2.99,
-        quantity: 200,
+        stocks: 200,
+        quantityToAdd: 0,
         available: { online: true, store: true },
-        shipping: { free: true, standard: false},
+        shipping: { free: true, standard: false },
         category: `Tape`,
         size: `27 Metre`,
         weight: 0.2
-    },{
+    }, {
         id: 105,
         name: `Packaging Paper Tape Medium`,
         image: `paper-tape-medium.jpg`,
         description: `Packaging Paper Tape is ideal for moving and storage. It easily tears by hand and is self-sticking.`,
         price: 3.99,
-        quantity: 150,
+        stocks: 150,
+        quantityToAdd: 0,
         available: { online: true, store: true },
-        shipping: { free: true, standard: false},
+        shipping: { free: true, standard: false },
         category: `Tape`,
         size: `40 Metre`,
         weight: 0.3
-    },{
+    }, {
         id: 106,
         name: `Packaging Paper Tape Large`,
         image: `paper-tape-large.jpg`,
         description: `Packaging Paper Tape is ideal for moving and storage. It easily tears by hand and is self-sticking.`,
         price: 4.99,
-        quantity: 120,
+        stocks: 120,
+        quantityToAdd: 0,
         available: { online: true, store: true },
-        shipping: { free: true, standard: false},
+        shipping: { free: true, standard: false },
         category: `Tape`,
         size: `60 Metre`,
         weight: 0.4
-    },{
+    }, {
         id: 107,
         name: `Packaging Paper Tape Extra Large`,
         image: `paper-tape-extra-large.jpg`,
         description: `Packaging Paper Tape is ideal for moving and storage. It easily tears by hand and is self-sticking.`,
         price: 5.99,
-        quantity: 100,
+        stocks: 100,
+        quantityToAdd: 0,
         available: { online: true, store: true },
-        shipping: { free: true, standard: false},
+        shipping: { free: true, standard: false },
         category: `Tape`,
         size: `100 Metre`,
         weight: 0.5
-    },{
+    }, {
         id: 108,
         name: `Duct Tape Small`,
         image: `duct-tape-small.jpg`,
         description: `A moisture resistance tape with easy tear and conformability.`,
         price: 10.99,
-        quantity: 100,
+        stocks: 100,
+        quantityToAdd: 0,
         available: { online: true, store: true },
-        shipping: { free: true, standard: false},
+        shipping: { free: true, standard: false },
         category: `Tape`,
         size: `100 Metre`,
         weight: 0.5
-    },{
+    }, {
         id: 109,
         name: `Duct Tape Large`,
         image: `duct-tape-large.jpg`,
         description: `A moisture resistance tape with easy tear and conformability.`,
         price: 18.99,
-        quantity: 100,
+        stocks: 100,
+        quantityToAdd: 0,
         available: { online: true, store: true },
-        shipping: { free: true, standard: false},
+        shipping: { free: true, standard: false },
         category: `Tape`,
         size: `200 Metre`,
         weight: 1
-    },{
+    }, {
         id: 110,
         name: `Electrical Tape Small`,
         image: `electrical-tape-small.jpg`,
         description: `High temperature conformable elastic thick tape.`,
         price: 14.99,
-        quantity: 100,
+        stocks: 100,
+        quantityToAdd: 0,
         available: { online: true, store: true },
-        shipping: { free: true, standard: false},
+        shipping: { free: true, standard: false },
         category: `Tape`,
         size: `200 Metre`,
         weight: 0.5
-    },{
+    }, {
         id: 111,
         name: `Electrical Tape Large`,
         image: `electrical-tape-large.jpg`,
         description: `High temperature conformable elastic thick tape.`,
         price: 19.99,
-        quantity: 100,
+        stocks: 100,
+        quantityToAdd: 0,
         available: { online: true, store: true },
-        shipping: { free: true, standard: false},
+        shipping: { free: true, standard: false },
         category: `Tape`,
         size: `150 Metre`,
         weight: 0.7
-    },{
+    }, {
         id: 112,
         name: `White Tape`,
         image: `white-tape.jpg`,
         description: `Great for assembling moving and cargo boxes. No blades or knives required.`,
         price: 9.99,
-        quantity: 50,
+        stocks: 50,
+        quantityToAdd: 0,
         available: { online: true, store: true },
-        shipping: { free: true, standard: false},
+        shipping: { free: true, standard: false },
         category: `Tape`,
         size: `100 Metre`,
         weight: 0.4
-    },{
+    }, {
         id: 113,
         name: `Luggage Box`,
         image: `luggage-box.jpg`,
         description: `Box handle makes it easy to use as a suitcase for travel or for shipping.`,
         price: 6.99,
-        quantity: 50,
+        stocks: 50,
+        quantityToAdd: 0,
         available: { online: false, store: true },
-        shipping: { free: false, standard: true},
+        shipping: { free: false, standard: true },
         category: `Box`,
         size: `Large`,
         weight: 0.7
-    },{
+    }, {
         id: 114,
         name: `Matress Bag Twin`,
         image: `matress-bag-twin.jpg`,
         description: `Matress bags will keep your mattresses or box springs protected against dust, soil, and light.`,
         price: 4.99,
-        quantity: 75,
+        stocks: 75,
+        quantityToAdd: 0,
         available: { online: true, store: true },
-        shipping: { free: true, standard: false},
+        shipping: { free: true, standard: false },
         category: `Bag`,
         size: `Twin`,
         weight: 0.7
-    },{
+    }, {
         id: 115,
         name: `Matress Bag Queen`,
         image: `matress-bag-queen.jpg`,
         description: `Matress bags will keep your mattresses or box springs protected against dust, soil, and light.`,
         price: 5.99,
-        quantity: 75,
+        stocks: 75,
+        quantityToAdd: 0,
         available: { online: true, store: true },
-        shipping: { free: true, standard: false},
+        shipping: { free: true, standard: false },
         category: `Bag`,
         size: `Queen`,
         weight: 0.7
-    },{
+    }, {
         id: 116,
         name: `Matress Bag King`,
         image: `matress-bag-king.jpg`,
         description: `Matress bags will keep your mattresses or box springs protected against dust, soil, and light.`,
         price: 6.99,
-        quantity: 75,
+        stocks: 75,
+        quantityToAdd: 0,
         available: { online: true, store: true },
-        shipping: { free: true, standard: false},
+        shipping: { free: true, standard: false },
         category: `Bag`,
         size: `King`,
         weight: 0.8
-    },{
+    }, {
         id: 117,
         name: `Sofa Cover`,
         image: `sofa-cover.jpg`,
         description: `Sofa Cover is great for protecting sofas, couches and other furniture from debris`,
         price: 7.99,
-        quantity: 75,
+        stocks: 75,
+        quantityToAdd: 0,
         available: { online: true, store: true },
-        shipping: { free: true, standard: false},
+        shipping: { free: true, standard: false },
         category: `Cover`,
         size: `Large`,
         weight: 0.3
-    },{
+    }, {
         id: 118,
         name: `Chair Cover`,
         image: `chair-cover.jpg`,
         description: `Chair Cover is great for protecting chairs, stools and other furniture from debris`,
         price: 7.99,
-        quantity: 75,
+        stocks: 75,
+        quantityToAdd: 0,
         available: { online: true, store: true },
-        shipping: { free: true, standard: false},
+        shipping: { free: true, standard: false },
         category: `Cover`,
         size: `Medium`,
         weight: 0.3
-    },{
+    }, {
         id: 119,
         name: `Bubble Wrap Small`,
         image: `bubble-wrap-small.jpg`,
         description: `Bubble wrap is efficient way to protect and wrap fragile items such as glassware, electronics, artwork, home decor and more.`,
         price: 17.99,
-        quantity: 75,
+        stocks: 75,
+        quantityToAdd: 0,
         available: { online: true, store: true },
-        shipping: { free: true, standard: false},
+        shipping: { free: true, standard: false },
         category: `Wrap`,
         size: `Small`,
         weight: 0.5
-    },{
+    }, {
         id: 120,
         name: `Bubble Wrap Medium`,
         image: `bubble-wrap-medium.jpg`,
         description: `Bubble wrap is efficient way to protect and wrap fragile items such as glassware, electronics, artwork, home decor and more.`,
         price: 29.99,
-        quantity: 75,
+        stocks: 75,
+        quantityToAdd: 0,
         available: { online: true, store: true },
-        shipping: { free: true, standard: false},
+        shipping: { free: true, standard: false },
         category: `Wrap`,
         size: `Medium`,
         weight: 0.9
-    },{
+    }, {
         id: 121,
         name: `Bubble Wrap Large`,
         image: `bubble-wrap-large.jpg`,
         description: `Bubble wrap is efficient way to protect and wrap fragile items such as glassware, electronics, artwork, home decor and more.`,
         price: 35.99,
-        quantity: 75,
+        stocks: 10,
+        quantityToAdd: 0,
         available: { online: false, store: true },
-        shipping: { free: false, standard: true},
+        shipping: { free: false, standard: true },
         category: `Wrap`,
         size: `Large`,
         weight: 0.9
@@ -285,13 +307,6 @@ const allProducts = [
 let productQuantity = 0;
 let qty;
 
-let addQuantityButton = document.getElementById("addQtyButton");
-let subQuantityButton = document.getElementById("substractQtyButton");
-let addToCartButton = document.getElementById("cartButton");
-let addToFavItem = document.getElementById("favouriteItem");
-
-document.getElementById(`productQuantityLabel`).innerHTML = `${productQuantity}`;
-
 /*  Function: getProductAsHtmlString
     Parameters: product, varname: NA, Type: NA
     Return: HTML String
@@ -299,7 +314,6 @@ document.getElementById(`productQuantityLabel`).innerHTML = `${productQuantity}`
 function getProductAsHtmlString(product) {
     let promotionalItem = ``;
     let productStock = ``;
-    let addToCart = `<button data-productid="${product.id}" id="cartButton" type="button" class="cart-btn">Add to Cart</button>`
     if (product.quantity <= 0) {
         promotionalItem = `<small class="promotionalItem">Sold out</small>`;
         productStock = `outofstock`;
@@ -319,14 +333,14 @@ function getProductAsHtmlString(product) {
                 <li><label><input type="radio" name="size" value="o"> <span>Ship to home</span></label></li>
                 <li><label><input type="radio" name="size" value="s"> <span>Pick up in store</span></label></li>
             </ul>
-            <footer class="footer-product">
+            <footer class="footer-product" data-productid="${product.id}">
                 <data value="${product.price}" class="price"><label>$${product.price}</label></data>
                 <ul>
                     <li><button id="addQtyButton" type="button" class="qtyButton qtyButton-add">+</button></li>
                     <li><button id="substractQtyButton" type="button" class="qtyButton qtyButton-sub">-</button></li>
                 </ul>
-                <label id="productQuantityLabel" class="quantity"></label>
-                ${addToCart}
+                <label id="productQuantityLabel_${product.id}" class="quantity">${product.quantityToAdd}</label>
+                <button data-productid="${product.id}" id="cartButton" type="button" class="cart-btn">Add to Cart</button>
                 <button id="favouriteItem" type="button" class="fav-item"><span class="material-icons">favorite</span></button>
             </footer>
         </form>
@@ -336,11 +350,11 @@ function getProductAsHtmlString(product) {
 const renderProductsFromArray = arr => {
     const sortBy = document.getElementById('sortOrder').value;
     arr = loadProductsByOrder(arr, sortBy);
-
+    console.log(arr)
     if (arr.length > 0) {
-        document.getElementById('products').innerHTML = arr.map(getProductAsHtmlString).join('\n'); 
+        document.getElementById('products').innerHTML = arr.map(getProductAsHtmlString).join('\n');
     } else {
-      document.getElementById('products').innerHTML = 'Sorry, No matching results, try fewer keywords, or try different keywords.'
+        document.getElementById('products').innerHTML = 'Sorry, No matching results, try fewer keywords, or try different keywords.'
     }
     document.getElementById('numResults').innerHTML = `(${arr.length} ${(arr.length == 1) ? 'item' : 'items'})`;
 
@@ -358,22 +372,22 @@ const sortProducts = event => {
 const loadProductsByOrder = (arrToSort, criteria) => {
     const sortedProducts = arrToSort.slice();
     if (criteria == 'nameAsc') {
-      // A to Z
-      sortedProducts.sort((a, b) => a.name.localeCompare(b.name));
+        // A to Z
+        sortedProducts.sort((a, b) => a.name.localeCompare(b.name));
     } else if (criteria == 'nameDesc') {
-      // Z to A
-      sortedProducts.sort((a, b) => b.name.localeCompare(a.name));
+        // Z to A
+        sortedProducts.sort((a, b) => b.name.localeCompare(a.name));
     }
     return sortedProducts;
 }
 
 const runFilterTool = theForm => {
     const productNameToSearch = theForm.elements.productName.value;
-    const productCategoryToSearch = theForm.elements.categoryName.value;  
+    const productCategoryToSearch = theForm.elements.categoryName.value;
     const filteredProducts = allProducts
-      .filter(p => p.name.toLowerCase().includes( productNameToSearch.trim().toLowerCase() ))
-      .filter(p => p.category == productCategoryToSearch || productCategoryToSearch == "All");
-    
+        .filter(p => p.name.toLowerCase().includes(productNameToSearch.trim().toLowerCase()))
+        .filter(p => p.category == productCategoryToSearch || productCategoryToSearch == "All");
+
     renderProductsFromArray(filteredProducts);
 }
 
@@ -382,7 +396,7 @@ const runFilterTool = theForm => {
     Return: ++quantity
     Description: return added quantity */
 const addQty = quantity => {
-    return(++quantity);
+    return (++quantity);
 }
 
 /*  Function: subQty
@@ -390,30 +404,12 @@ const addQty = quantity => {
     Return: 0 if quantity is less than 0 or subtracted quantity
     Description: return substracted quantity */
 const subQty = quantity => {
-    if (quantity <= 0){
+    if (quantity <= 0) {
         return 0;
     }
-    else{
-        return(--quantity);
+    else {
+        return (--quantity);
     }
-}
-
-/*  Function: addProductQty
-    Parameters: NA, varname: qty, Type: int
-    Return: NA
-    Description: display added quantity to productQuantityLabel */
-function addProductQty(){
-    qty = addQty(document.getElementById(`productQuantityLabel`).innerHTML);
-    document.getElementById(`productQuantityLabel`).innerHTML = `${qty}`;
-}
-
-/*  Function: subProductQty
-    Parameters: NA, varname: qty, Type: int
-    Return: NA
-    Description: display substracted quantity to productQuantityLabel */
-function subProductQty(){
-    qty = subQty(document.getElementById(`productQuantityLabel`).innerHTML);
-    document.getElementById(`productQuantityLabel`).innerHTML = `${qty}`;
 }
 
 /*  Function: addItemToCart
@@ -425,31 +421,47 @@ const addItemToCart = productId => {
     if (cartItem) {
         cartItem.qty++;
     } else {
-        shoppingCart.push({productId: productId, qty: 1});
+        shoppingCart.push({ productId: productId, qty: 1 });
         alert(`You added item with product id ${productId} to your shopping cart.`);
-    }  
+    }
 }
 
 const handleClickOfProducts = event => {
-    if (!event.target.matches('button.cart-btn')) {
+    const productid = parseInt(event.target.closest(`footer`).dataset.productid);
+    if (event.target.matches('button.cart-btn')) {
+        console.log('clicked', productid)
+        addItemToCart(productid);
+    } else if (event.target.matches(`.qtyButton.qtyButton-add`)){
+        // find the product first using the product id
+        const newQty = allProducts.find(p => p.id == productid).quantityToAdd++;
+        document.querySelector(`#productQuantityLabel_${productid}`).innerHTML = `${newQty}`;
+        console.log(productid)
+
+    }else if (event.target.matches(`.qtyButton.qtyButton-sub`)){
+        //Neet to work on substracting qty
+        // console.log('Substract clicked')
+        // newQty = allProducts.find(p => p.id == productid).quantityToAdd--;
+        // document.querySelector(`#productQuantityLabel_${productid}`).innerHTML = `${newQty}`;
+        // console.log('Substract clicked')
         return;
     }
-    const productid = parseInt(event.target.dataset.productid);
-    addItemToCart(productid);
+    else {
+        return;
+    }
 }
 
-function addItemAsFavourite(){
+function addItemAsFavourite() {
     let favItem = document.getElementById(`favouriteItem`).style.color;
-    if(favItem == `red`){
+    if (favItem == `red`) {
         document.getElementById(`favouriteItem`).style.color = "rgb(167, 204, 247)";
         alert(`You removed your favourite item.`);
-    }else{
+    } else {
         document.getElementById(`favouriteItem`).style.color = "red";
         alert(`You added this item as a favourite.`);
     }
 }
 
-function showHideMenu(){
+function showHideMenu() {
     let menu = document.getElementById("mainMenu");
     if (menu.style.display == "block") {
         menu.style.display = "none";
@@ -458,7 +470,7 @@ function showHideMenu(){
     }
 }
 
-function showHideSearchArea(){
+function showHideSearchArea() {
     let search = document.getElementById("searchArea");
     if (search.style.display == "block") {
         search.style.display = "none";
@@ -467,16 +479,17 @@ function showHideSearchArea(){
     }
 }
 
-
-// --------------------------------------------
-// Click Event Listener
-subQuantityButton.addEventListener("click",subProductQty)
-addToFavItem.addEventListener("click",addItemAsFavourite)
-
 // Load Event Listener
 window.addEventListener('load', () => {
     //Rendering all products on page load
+    console.log('load')
     renderProductsFromArray(allProducts);
+
+    let addToFavItem = document.getElementById("favouriteItem");
+
+    // --------------------------------------------
+    // Click Event Listener
+    addToFavItem.addEventListener("click", addItemAsFavourite)
 
     //Searching product by product name
     document.getElementById('productName').addEventListener('input', submitFilterForm);

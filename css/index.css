@@ -202,7 +202,17 @@ p{
     border-radius: 0.2em;
     margin: 0.5em 0;    
     padding: 0.5em;
+    border: 0 solid;
+}
+
+.category-dropdown{
+    width:100%;  
+    background: rgb(187, 223, 205);
+    color: rgb(8, 8, 8);
+    outline: none;
     border-radius: 0.2em;
+    margin: 0.5em 0;    
+    padding: 0.5em;
     border: 0 solid;
 }
 

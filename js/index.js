@@ -485,16 +485,13 @@ function showHideSearchArea() {
 
 function showHideCheckout() {
     let cart = document.getElementById("viewCart");
-    let prod = document.getElementById("products");
     let totalSort = document.getElementById("total-sort");
 
     if (cart.style.display == "block") {
         cart.style.display = "none";
-        prod.style.display = "grid";
         totalSort.style.display = "grid";
     } else {
         cart.style.display = "block";
-        prod.style.display = "none";
         totalSort.style.display = "none";
     }
 }

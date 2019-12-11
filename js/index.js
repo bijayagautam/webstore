@@ -365,7 +365,7 @@ const handleClickOfProducts = event => {
         addItemToCart(productid);
         qty = document.querySelector(`#productQuantityLabel_${productid}`).innerHTML;
         alert(`You added ${qty} product(s) with product name and id ${productid} to cart.`);
-
+        // document.getElementById(`check-productid`).innerHTML = `${productid}`;
     } else if (event.target.matches(`.qtyButton.qtyButton-add`)){
         // find the product first using the product id
         // const newQty = allProducts.find(p => p.id == productid).quantityToAdd++;
@@ -490,7 +490,7 @@ function showHideCheckout() {
 
     if (cart.style.display == "block") {
         cart.style.display = "none";
-        prod.style.display = "block";
+        prod.style.display = "grid";
         totalSort.style.display = "grid";
     } else {
         cart.style.display = "block";

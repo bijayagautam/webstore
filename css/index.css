@@ -209,6 +209,7 @@ p{
 
 .view-cart{
     display: none;
+    max-width: 30em;
 }
 
 .checkout-details{
@@ -252,7 +253,7 @@ p{
     max-width: 30em;
     box-shadow: 0.5em 0.5em 4em rgb(202, 201, 201);
     border-radius: 0.2em;
-    margin: 0.5em 0;
+    margin: 0.5em auto;
 }
 
 .product.outofstock {
@@ -315,8 +316,12 @@ p{
     background-color: crimson;
 }
 
+/* .open {
+    display: block;
+} */
+
 /* Media Query Goes Here--- */
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 50em) {
     .navbar {
       grid-template-columns: 3em  auto  2em 2em;
       grid-template-areas:  "logo menu search checkout";  
@@ -339,4 +344,23 @@ p{
     .searchbox{
         width: 43%;
     }
+
+    #products {
+        display: grid;
+        grid-column-gap: 1em;
+        grid-template-columns: 1fr 1fr;
+    }
 }
+
+@media screen and (min-width: 80em) {
+    #products {
+        display: grid;
+        grid-column-gap: 10em;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .product {
+        margin: 2em auto;
+    }
+}
+

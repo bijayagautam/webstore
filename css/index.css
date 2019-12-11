@@ -141,9 +141,7 @@ p{
 .main-menu {
     grid-area: menu;
     text-align: center; 
-    display: none;
     font-size: 1.2rem;
-    /* change display none on screen size change */
 }
 
 .main-menu a {
@@ -180,11 +178,6 @@ p{
     padding: 1em 1em;
 }
 
-.search-area{
-    /* color: rgb(27, 8, 97); */
-    display: none;
-}
-
 .searchbox{
     width: 100%;
     padding: 0.5em;
@@ -208,8 +201,8 @@ p{
 }
 
 .view-cart{
-    display: none;
     max-width: 30em;
+    margin: 0 auto;
 }
 
 .checkout-details{
@@ -241,7 +234,6 @@ p{
 }
 
 .sort-area{
-    max-width: 30em;
     display: grid;
     grid-template-columns: auto auto;
     text-align: center;
@@ -321,48 +313,63 @@ p{
     background-color: crimson;
 }
 
-/* .open {
-    display: block;
-} */
 
 /* Media Query Goes Here--- */
 @media screen and (min-width: 50em) {
-    .navbar {
-      grid-template-columns: 3em  auto  2em 2em;
-      grid-template-areas:  "logo menu search checkout";  
-    }
-  
-    .hamburger {
-      display: none;
-    }
-  
-    .main-menu {
-      text-align: center;
-      display: flex;
-      justify-content: space-evenly;
-    }
-  
-    .main-menu a {
-      padding: 0 1em;
-    }
-
-    .searchbox{
-        width: 43%;
-    }
-
     #products {
         display: grid;
         grid-column-gap: 1em;
         grid-template-columns: 1fr 1fr;
     }
+
+    .sort-area{
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .media{
+        padding: 0 10em;
+    }
     
 }
 
+    /* css to toggle show and hide content */
+    .show-hide{
+        display: none;
+    }
+
 @media screen and (min-width: 60em) {
+    .navbar {
+        grid-template-columns: 3em  auto  2em 2em;
+        grid-template-areas:  "logo menu search checkout";  
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    .main-menu {
+        text-align: center;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .main-menu a {
+        padding: 0 1em;
+    }
+
+    .searchbox{
+        max-width: 30%;
+        float: center;
+        margin: 0 auto;
+    }
+
     #products {
         display: grid;
-        grid-column-gap: 10em;
+        grid-column-gap: 5em;
         grid-template-columns: 1fr 1fr 1fr;
+        max-width: 80em;
+        margin: 0 auto;
     }
 
     .product {
@@ -375,6 +382,20 @@ p{
     
     .logo-image{
        margin: 0.2em;
+    }
+    
+    .search-area{
+        margin: 0 auto;
+    }
+    
+    .sort-area{
+        max-width: 100%;
+        text-align: center;
+        padding: 0 10em;
+    }
+    
+    .media{
+        padding: 0 30em;
     }
 }
 

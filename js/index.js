@@ -461,39 +461,15 @@ const addItemToCart = productId => {
 }
 
 function showHideMenu() {
-    let menu = document.getElementById("mainMenu");
-    if (menu.style.display == "block") {
-        menu.style.display = "none";
-    } else {
-        menu.style.display = "block";
-    }
+    document.getElementById("mainMenu").classList.toggle("show-hide");  
 }
 
 function showHideSearchArea() {
-    let search = document.getElementById("searchArea");
-    let dropMenu = document.getElementById("mainMenu");
-    if (search.style.display == "block") {
-        search.style.display = "none";
-        dropMenu.style.display = "none";
-
-    } else {
-        search.style.display = "block";
-        dropMenu.style.display = "none";
-
-    }
+    document.getElementById("searchArea").classList.toggle("show-hide");  
 }
 
 function showHideCheckout() {
-    let cart = document.getElementById("viewCart");
-    let totalSort = document.getElementById("total-sort");
-
-    if (cart.style.display == "block") {
-        cart.style.display = "none";
-        totalSort.style.display = "grid";
-    } else {
-        cart.style.display = "block";
-        totalSort.style.display = "none";
-    }
+    document.getElementById("viewCart").classList.toggle("show-hide");  
 }
 
 // Load Event Listener

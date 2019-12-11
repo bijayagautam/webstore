@@ -122,9 +122,12 @@ p{
 
 .logo {
     grid-area: logo;
-    justify-self: center; 
-    max-width: 15%; 
-    /* re-check logo size */
+    text-align: center;
+    align-self: center;
+}
+
+.logo-image{
+    max-width: 5em;
 }
 
 .hamburger {
@@ -355,6 +358,7 @@ p{
         grid-column-gap: 1em;
         grid-template-columns: 1fr 1fr;
     }
+    
 }
 
 @media screen and (min-width: 60em) {
@@ -372,5 +376,8 @@ p{
         display: none;
     }
     
+    .logo-image{
+       margin: 0.2em;
+    }
 }
 

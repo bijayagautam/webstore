@@ -64,7 +64,6 @@ p{
 /* CSS for button and icons */
 .icon-theme{
     color: var(--lightcolor);
-    font-size: 1.5em;
 }
 
 .cart-btn{
@@ -161,10 +160,8 @@ p{
 
 .shoppingcart {
     grid-area: checkout;
-    background-color: transparent;
-    border: none;
-    outline: none;
-    margin: 0 0.5em 0 0;
+    margin: 0.4em 0.1em;
+    cursor: pointer;
 }
 
 .search-lens {

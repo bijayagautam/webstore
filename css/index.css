@@ -11,6 +11,8 @@
     --sansserif: 'Roboto', sans-serif;
     --paragraphFont: 'Raleway', sans-serif;
     --menufont: 'Titillium Web', sans-serif;
+    --menuhovercolor: yellow;
+    --menuhoverBackgroundcolor:rgb(75, 99, 76);
 }
 
 /* General CSS */
@@ -155,8 +157,8 @@ p{
 }
 
 .main-menu a:hover {
-    color: yellow;
-    background-color: rgb(75, 99, 76);
+    color: var(--menuhovercolor);
+    background-color: var(--menuhoverBackgroundcolor);
 }
 
 .shoppingcart {
@@ -215,6 +217,7 @@ p{
     font-size: 0.8em;
     text-align: center;
 }
+
 .category-dropdown{
     width:100%;  
     background: rgb(187, 223, 205);
@@ -307,7 +310,6 @@ p{
     padding: 2em 1em;    
 }
 
-
 .promotionalItem {
     display: inline-block;
     font-size: 0.7em;
@@ -326,12 +328,6 @@ p{
 
 /* Media Query Goes Here--- */
 @media screen and (min-width: 50em) {
-    #products {
-        display: grid;
-        grid-column-gap: 1em;
-        grid-template-columns: 1fr 1fr;
-    }
-
     .sort-area{
         max-width: 100%;
         text-align: center;
@@ -346,6 +342,12 @@ p{
         grid-template-columns: 23em;
         grid-gap: 0.5em;
         justify-content: right;
+    }
+
+    #products {
+        display: grid;
+        grid-column-gap: 1em;
+        grid-template-columns: 1fr 1fr;
     }
     
 }
@@ -375,15 +377,6 @@ p{
         padding: 0 1em;
     }
 
-
-    #products {
-        display: grid;
-        grid-column-gap: 5em;
-        grid-template-columns: 1fr 1fr 1fr;
-        max-width: 80em;
-        margin: 0 auto;
-    }
-
     .product {
         margin: 2em auto;
     }
@@ -396,7 +389,6 @@ p{
        margin: 0.2em;
     }
     
-    
     .sort-area{
         max-width: 100%;
         text-align: center;
@@ -405,6 +397,14 @@ p{
     
     .media{
         padding: 0 30em;
+    }
+
+    #products {
+        display: grid;
+        grid-column-gap: 5em;
+        grid-template-columns: 1fr 1fr 1fr;
+        max-width: 80em;
+        margin: 0 auto;
     }
 }
 

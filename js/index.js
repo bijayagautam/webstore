@@ -6,10 +6,10 @@ const settings = {
     imgpath: 'img/'
 }
 
-const shoppingCart = [
-    {
-        productId: 100, qty: 1
-    }
+const shoppingCart = [ // start shopping on an empty cart
+    // {
+    //     productId: 100, qty: 1
+    // }
 ];
 
 // Declaring all products details as an array
@@ -370,11 +370,11 @@ const renderProductsFromArray = arr => {
 const handleClickOfProducts = event => {
     const productid = parseInt(event.target.closest(`footer`).dataset.productid);
     if (event.target.matches('button.cart-btn')) {
-        addItemToCart(productid);
+        
         qty = document.querySelector(`#productQuantityLabel_${productid}`).innerHTML;
         let price = document.querySelector(`#price_${productid}`).value;
         let totalPrice = price * qty;
-        rendershopping(productid, qty, price, totalPrice);
+        addItemToCart(productid, qty, price, totalPrice);
         document.getElementById(`ship-pickup_${productid}`).innerHTML = `Added to cart! Quantity : ${qty}`;
 
     } else if (event.target.matches(`.qtyButton.qtyButton-add`)){
@@ -410,31 +410,62 @@ const handleClickOfProducts = event => {
     }
 }
 
+function templateForCheckoutItems(items) {
+    return items.map(item => { 
+        return `<tr>
+            <td>${item.productId}</td>
+            <td>${item.qty}</td>
+            <td>$${item.price.toFixed(2)}</td>
+            <td>$${item.totalPrice.toFixed(2)}</td>
+        </tr>`
+    });
+    
+}
+
 /*  Function: rendershopping
     Parameters: productid, qty, price, totalPrice
     Return: HTML String
     Description: return html block for when product is added to shopping cart and users clicked the cart button */
-function rendershopping(productid, qty, price, totalPrice){
+function rendershopping(itemsOnCart){
     document.getElementById(`viewCart`).innerHTML =  
     `
         <h2>Shopping Cart</h2>
         <hr>
-          <ul class="checkout-details">
-            <li><label>Product Id</label></li>
-            <li><label>Qty</label></li>
-            <li><label>Price</label></li>
-            <li><label>Total</label></li>  
-            
-            <li><label id="check-productid">${productid}</label></li>
-            <li><label id="check-qty"></label>${qty}</li>
-            <li><label id="check-price"></label>$${price}</li>
-            <li><label id="check-total">$${totalPrice.toFixed(2)}</label></li>    
-          </ul>
+        <table>
+        <thead>
+          <tr>
+            <td>Product Id</td>
+            <td>Quantity</td>
+            <td>Price</td>
+            <td>Total Price</td>
+          </tr>
+        </thead>
+        <tbody>
+        ${templateForCheckoutItems(itemsOnCart)}
+        </tbody>
+        </table>
         <hr>
         <p>Thank you for shopping</p>
         <hr>
     `
 }
+
+/*  Function: addItemToCart
+    Parameters: productId:Object
+    Return: productId, qty
+    Description: Add productId and quantity to cart */
+const addItemToCart = (productId, qty, price, totalPrice) => {
+    const cartItem = shoppingCart.find(item => item.productId == productId);
+    if (cartItem) {
+        cartItem.qty += parseInt(qty);
+        cartItem.totalPrice += parseFloat(totalPrice);
+    } else {
+        shoppingCart.push({ productId, qty: parseInt(qty), price: parseFloat(price), totalPrice: parseFloat(totalPrice) });
+    }
+
+    rendershopping(shoppingCart);
+}
+
 const submitFilterForm = event => {
     runFilterTool(event.target.form);
 }
@@ -494,18 +525,7 @@ const subQty = quantity => {
     }
 }
 
-/*  Function: addItemToCart
-    Parameters: productId:Object
-    Return: productId, qty
-    Description: Add productId and quantity to cart */
-const addItemToCart = productId => {
-    const cartItem = shoppingCart.find(item => item.productId == productId);
-    if (cartItem) {
-        cartItem.qty++;
-    } else {
-        shoppingCart.push({ productId: productId, qty: 1 });
-    }
-}
+
 
 /*  Function: showHideMenu
     Parameters: NA

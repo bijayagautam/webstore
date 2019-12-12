@@ -12,6 +12,7 @@ const shoppingCart = [
     }
 ];
 
+// Declaring all products details as an array
 const allProducts = [
     {
         id: 100,
@@ -359,6 +360,11 @@ const renderProductsFromArray = arr => {
 
 }
 
+
+/*  Function: handleClickOfProducts
+    Parameters: NA, Variable: productid
+    Return: qty, price, totalprice, productid, and log fav
+    Description: returns targeted event clicked output*/
 const handleClickOfProducts = event => {
     const productid = parseInt(event.target.closest(`footer`).dataset.productid);
     if (event.target.matches('button.cart-btn')) {
@@ -394,6 +400,10 @@ const handleClickOfProducts = event => {
     }
 }
 
+/*  Function: rendershopping
+    Parameters: productid, qty, price, totalPrice
+    Return: HTML String
+    Description: return html block for when product is added to shopping cart and users clicked the cart button */
 function rendershopping(productid, qty, price, totalPrice){
     document.getElementById(`viewCart`).innerHTML =  
     `
@@ -423,7 +433,10 @@ const sortProducts = event => {
     runFilterTool(document.getElementById('searchArea'));
 }
 
-// Sorting Products by alphabet
+/*  Function: loadProductsByOrder
+    Parameters: NA, varname: sortedProducts
+    Return: sortedProducts
+    Description: Sorting Products by alphabet */
 const loadProductsByOrder = (arrToSort, criteria) => {
     const sortedProducts = arrToSort.slice();
     if (criteria == 'nameAsc') {
@@ -436,6 +449,10 @@ const loadProductsByOrder = (arrToSort, criteria) => {
     return sortedProducts;
 }
 
+/*  Function: runFilterTool
+    Parameters: NA, varname: productNameToSearch, productCategoryToSearchType,filteredProducts
+    Return: filteredProducts
+    Description: renders all filtered products when filter dropdown is clicked */
 const runFilterTool = theForm => {
     const productNameToSearch = theForm.elements.productName.value;
     const productCategoryToSearch = theForm.elements.categoryName.value;
@@ -480,14 +497,26 @@ const addItemToCart = productId => {
     }
 }
 
+/*  Function: showHideMenu
+    Parameters: NA
+    Return: show-hide class
+    Description: Hide or show menu when clicked */
 function showHideMenu() {
     document.getElementById("mainMenu").classList.toggle("show-hide");  
 }
 
+/*  Function: showHideSearchArea
+    Parameters: NA
+    Return: show-hide class
+    Description: Hide or show search area when clicked */
 function showHideSearchArea() {
     document.getElementById("searchArea").classList.toggle("show-hide");  
 }
 
+/*  Function: showHideCheckout
+    Parameters: NA
+    Return: show-hide class
+    Description: Hide or show checkout section when clicked */
 function showHideCheckout() {
     document.getElementById("viewCart").classList.toggle("show-hide");  
 }
@@ -505,6 +534,7 @@ window.addEventListener('load', () => {
     //Sorting
     document.getElementById('sortOrder').addEventListener('change', sortProducts);
 
+    //Click Event Listener
     document.getElementById('products').addEventListener('click', handleClickOfProducts);
     document.getElementById('hamMenu').addEventListener('click', showHideMenu);
     document.getElementById('search-icon').addEventListener('click', showHideSearchArea);

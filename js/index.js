@@ -366,7 +366,8 @@ const handleClickOfProducts = event => {
         qty = document.querySelector(`#productQuantityLabel_${productid}`).innerHTML;
         let price = document.querySelector(`#price_${productid}`).value;
         let totalPrice = price * qty;
-        alert(`You added ${qty} product(s) with id ${productid}, Unit price ${price} and your Total is ${totalPrice} to Cart.`);
+        rendershopping(productid, qty, price, totalPrice);
+        // alert(`You added ${qty} product(s) with id ${productid}, Unit price ${price} and your Total is ${totalPrice} to Cart.`);
 
         // document.getElementById(`check-productid`).innerHTML = `${productid}`;
     } else if (event.target.matches(`.qtyButton.qtyButton-add`)){
@@ -393,6 +394,27 @@ const handleClickOfProducts = event => {
     }
 }
 
+function rendershopping(productid, qty, price, totalPrice){
+    document.getElementById(`viewCart`).innerHTML =  
+    `
+        <h2>Shopping Cart</h2>
+        <hr>
+          <ul class="checkout-details">
+            <li><label>Product Id</label></li>
+            <li><label>Qty</label></li>
+            <li><label>Price</label></li>
+            <li><label>Total</label></li>  
+            
+            <li><label id="check-productid">${productid}</label></li>
+            <li><label id="check-qty"></label>${qty}</li>
+            <li><label id="check-price"></label>$${price}</li>
+            <li><label id="check-total">$${totalPrice}</label></li>    
+          </ul>
+        <hr>
+        <p>Thank you for shopping</p>
+        <hr>
+    `
+}
 const submitFilterForm = event => {
     runFilterTool(event.target.form);
 }

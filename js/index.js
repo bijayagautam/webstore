@@ -315,10 +315,10 @@ let qty;
 function getProductAsHtmlString(product) {
     let promotionalItem = ``;
     let productStock = ``;
-    if (product.quantity <= 0) {
+    if (product.stocks <= 0) {
         promotionalItem = `<small class="promotionalItem">Sold out</small>`;
         productStock = `outofstock`;
-    } else if (product.quantity > 100) {
+    } else if (product.stocks > 100) {
         promotionalItem = `<small class="promotionalItem urgent">10% OFF</small>`;
     }
 
@@ -396,7 +396,7 @@ const handleClickOfProducts = event => {
         } else {
             document.querySelector(`#favouriteItem_${productid}`).style.color = "red";
             document.getElementById(`ship-pickup_${productid}`).innerHTML = `Added as Favourite.`;
-            
+
         }
     }else if (event.target.matches(`.shipHome`)){
         document.getElementById(`ship-pickup_${productid}`).innerHTML = `You preferred this item(s) to be shipped to your home address.`;

@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web&display=swap');
 
 :root {
     --lightcolor: #fff;
@@ -9,6 +10,7 @@
     --soldoutlightcolor: rgb(199, 194, 194);
     --sansserif: 'Roboto', sans-serif;
     --paragraphFont: 'Raleway', sans-serif;
+    --menufont: 'Titillium Web', sans-serif;
 }
 
 /* General CSS */
@@ -142,6 +144,7 @@ p{
     grid-area: menu;
     text-align: center; 
     font-size: 1.2rem;
+    font-family: var(--menufont);
 }
 
 .main-menu a {
@@ -228,6 +231,7 @@ p{
     margin: 0.5em 0;    
     padding: 0.5em;
     border: 0 solid;
+    font-family: var(--menufont);
 }
 
 .sort-dropdown{
@@ -238,6 +242,7 @@ p{
     margin: 0.5em 0;    
     padding: 0.2em;
     border: 0 solid;
+    font-family: var(--menufont);
 }
 
 .sort-area{

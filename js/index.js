@@ -334,7 +334,7 @@ function getProductAsHtmlString(product) {
                     <li><label><input type="radio" name="size" value="o" class="shipHome"> <span>Ship to home</span></label></li>
                     <li><label><input type="radio" name="size" value="s" class="inStore"> <span>Pick up in store</span></label></li>
                 </ul>
-                <data value="${product.price}" class="price"><label>$${product.price}</label></data>
+                <data value="${product.price}" id="price_${product.id}"class="price"><label>$${product.price}</label></data>
                 <ul>
                     <li><button id="addQtyButton" type="button" class="qtyButton qtyButton-add">+</button></li>
                     <li><button id="substractQtyButton" type="button" class="qtyButton qtyButton-sub">-</button></li>
@@ -364,14 +364,12 @@ const handleClickOfProducts = event => {
     if (event.target.matches('button.cart-btn')) {
         addItemToCart(productid);
         qty = document.querySelector(`#productQuantityLabel_${productid}`).innerHTML;
-        alert(`You added ${qty} product(s) with product name and id ${productid} to cart.`);
+        let price = document.querySelector(`#price_${productid}`).value;
+        let totalPrice = price * qty;
+        alert(`You added ${qty} product(s) with id ${productid}, Unit price ${price} and your Total is ${totalPrice} to Cart.`);
+
         // document.getElementById(`check-productid`).innerHTML = `${productid}`;
     } else if (event.target.matches(`.qtyButton.qtyButton-add`)){
-        // find the product first using the product id
-        // const newQty = allProducts.find(p => p.id == productid).quantityToAdd++;
-        // document.querySelector(`#productQuantityLabel_${productid}`).innerHTML = `${newQty}`;
-        // // console.log(productid)
-
         //Calling function to add quantity and assigning new quantity to product quantity label
         qty = addQty(document.querySelector(`#productQuantityLabel_${productid}`).innerHTML);
         document.querySelector(`#productQuantityLabel_${productid}`).innerHTML = `${qty}`;

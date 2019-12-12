@@ -42,27 +42,25 @@
 
     <main class="main-content">
       <!-- Filtering and search product form -->
-      <div>
-        <form class="search-area show-hide content-search" id="searchArea">
-          <input type="search" name="find" id="productName" class="searchbox" placeholder="Search product by name">
-          <!-- <h1>Product Search</h1> -->
-          <fieldset class="search-form search-area content-search">
-            <label for="category">Category:</label>
-            <select name="categoryName" id="categoryName" class="category-dropdown">
-              <option value="All" selected>All Products</option>
-              <option value="Box">Box</option>
-              <option value="Tape">Tape</option>
-              <option value="Bag">Bag</option>
-              <option value="Cover">Cover</option>
-              <option value="Wrap">Wrap</option>
-            </select>
-          </fieldset>
-        </form>
-      </div>
+      <form class="search-area show-hide content-search" id="searchArea">
+        <!-- <h1>Product Search</h1> -->
+        <label for="search"></label>
+        <input type="search" name="find" id="productName" class="searchbox" placeholder="Search product by name">
+        <fieldset class="search-form search-area content-search">
+          <label for="category">Category:</label>
+          <select name="categoryName" id="categoryName" class="category-dropdown">
+            <option value="All" selected>All Products</option>
+            <option value="Box">Box</option>
+            <option value="Tape">Tape</option>
+            <option value="Bag">Bag</option>
+            <option value="Cover">Cover</option>
+            <option value="Wrap">Wrap</option>
+          </select>
+        </fieldset>
+      </form>
       
-
       <section class="view-cart show-hide" id="viewCart">
-        <!-- cart details goes here -->
+        <!-- cart details goes here, pulled as html string from index.js -->
       </section>
 
       <section class="advertisment">
@@ -87,6 +85,7 @@
       </section>
     </main>
 
+    <!-- Main Footer Area -->
     <footer class="main-footer">
       <p>This website is owned and developed by Bijaya Gautam</p>
       <p>&copy; Copyright, 2019.</p>

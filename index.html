@@ -42,21 +42,24 @@
 
     <main class="main-content">
       <!-- Filtering and search product form -->
-      <form class="search-area show-hide" id="searchArea">
-        <input type="search" name="find" id="productName" class="searchbox" placeholder="Search product by name">
-        <!-- <h1>Product Search</h1> -->
-        <fieldset class="search-form">
-          <label for="category">Category:</label>
-          <select name="categoryName" id="categoryName" class="category-dropdown">
-            <option value="All" selected>All Products</option>
-            <option value="Box">Box</option>
-            <option value="Tape">Tape</option>
-            <option value="Bag">Bag</option>
-            <option value="Cover">Cover</option>
-            <option value="Wrap">Wrap</option>
-          </select>
-        </fieldset>
-      </form>
+      <div>
+        <form class="search-area show-hide content-search" id="searchArea">
+          <input type="search" name="find" id="productName" class="searchbox" placeholder="Search product by name">
+          <!-- <h1>Product Search</h1> -->
+          <fieldset class="search-form search-area content-search">
+            <label for="category">Category:</label>
+            <select name="categoryName" id="categoryName" class="category-dropdown">
+              <option value="All" selected>All Products</option>
+              <option value="Box">Box</option>
+              <option value="Tape">Tape</option>
+              <option value="Bag">Bag</option>
+              <option value="Cover">Cover</option>
+              <option value="Wrap">Wrap</option>
+            </select>
+          </fieldset>
+        </form>
+      </div>
+      
 
       <section class="view-cart show-hide" id="viewCart">
         <h2>Shopping Cart</h2>
@@ -81,7 +84,7 @@
         <img src="img/christmas-sale-animation.gif" alt="sale">
       </section>
 
-      <section class="search-area sort-area" id="total-sort">
+      <section class="sort-area" id="total-sort">
         <h2>Total <small id="numResults">(0 items)</small></h2>
         <label for="sortOrder">Sort Product by:
             <select name="sort" id="sortOrder" class="sort-dropdown">

@@ -190,6 +190,13 @@ p{
     padding-left: 1.875em;
 }
 
+.content-search{
+    display: grid;
+    grid-template-columns: 28em;
+    grid-gap: 0.5em;
+    justify-content: right;
+}
+
 .search-form{
     background-color: rgb(248, 245, 242);
     max-width: 30em;
@@ -358,11 +365,6 @@ p{
         padding: 0 1em;
     }
 
-    .searchbox{
-        max-width: 30%;
-        float: center;
-        margin: 0 auto;
-    }
 
     #products {
         display: grid;
@@ -384,9 +386,6 @@ p{
        margin: 0.2em;
     }
     
-    .search-area{
-        margin: 0 auto;
-    }
     
     .sort-area{
         max-width: 100%;

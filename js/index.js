@@ -418,7 +418,7 @@ function templateForCheckoutItems(items) {
             <td>$${item.price.toFixed(2)}</td>
             <td>$${item.totalPrice.toFixed(2)}</td>
         </tr>`
-    });
+    }).join('');
     
 }
 
@@ -431,7 +431,7 @@ function rendershopping(itemsOnCart){
     `
         <h2>Shopping Cart</h2>
         <hr>
-        <table>
+        <table class="checkout-table">
         <thead>
           <tr>
             <td>Product Id</td>

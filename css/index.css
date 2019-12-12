@@ -218,6 +218,11 @@ p{
     text-align: center;
 }
 
+.checkout-table td{
+    padding: 1em;
+    text-align: center;
+}
+
 .category-dropdown{
     width:100%;  
     background: rgb(187, 223, 205);

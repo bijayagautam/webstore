@@ -192,7 +192,7 @@ p{
 
 .content-search{
     display: grid;
-    grid-template-columns: 28em;
+    grid-template-columns: 23em;
     grid-gap: 0.5em;
     justify-content: right;
 }

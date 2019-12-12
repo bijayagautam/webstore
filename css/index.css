@@ -193,13 +193,6 @@ p{
     padding-left: 1.875em;
 }
 
-.content-search{
-    display: grid;
-    grid-template-columns: 23em;
-    grid-gap: 0.5em;
-    justify-content: right;
-}
-
 .search-form{
     background-color: rgb(248, 245, 242);
     max-width: 30em;
@@ -341,6 +334,13 @@ p{
 
     .media{
         padding: 0 10em;
+    }
+
+    .content-search{
+        display: grid;
+        grid-template-columns: 23em;
+        grid-gap: 0.5em;
+        justify-content: right;
     }
     
 }

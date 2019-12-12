@@ -345,6 +345,8 @@ function getProductAsHtmlString(product) {
                 <button id="favouriteItem_${product.id}" type="button" class="fav-item"><span class="material-icons">favorite</span></button>
             </footer>
         </form>
+        <label id="ship-pickup_${product.id}" class="shipPickup"></label>
+
     </article>`;
 }
 
@@ -373,7 +375,6 @@ const handleClickOfProducts = event => {
         let price = document.querySelector(`#price_${productid}`).value;
         let totalPrice = price * qty;
         rendershopping(productid, qty, price, totalPrice);
-        // alert(`You added ${qty} product(s) with id ${productid}, Unit price ${price} and your Total is ${totalPrice} to Cart.`);
 
         // document.getElementById(`check-productid`).innerHTML = `${productid}`;
     } else if (event.target.matches(`.qtyButton.qtyButton-add`)){
@@ -394,6 +395,12 @@ const handleClickOfProducts = event => {
             document.querySelector(`#favouriteItem_${productid}`).style.color = "red";
             console.log(`Added as Favourite.`)
         }
+    }else if (event.target.matches(`.shipHome`)){
+        document.getElementById(`ship-pickup_${productid}`).innerHTML = `You preferred this item(s) to be shipped to your home address.`;
+
+    }
+    else if (event.target.matches(`.inStore`)){
+        document.getElementById(`ship-pickup_${productid}`).innerHTML = `You preferred this item(s) to pick up at your nearest oneTnine location.`;
     }
     else {
         return;

@@ -278,6 +278,10 @@ p{
     grid-gap: 0.2em;
 }
 
+.shipPickup{
+    color: var(--darkcolor);
+}
+
 .main-footer{
     padding: 1em;
     text-align: center;
@@ -298,6 +302,7 @@ p{
     display: grid;
     grid-template-columns: auto auto auto;
 }
+
 .social-media{
     padding: 2em 1em;    
 }

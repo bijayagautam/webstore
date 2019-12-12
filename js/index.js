@@ -375,8 +375,8 @@ const handleClickOfProducts = event => {
         let price = document.querySelector(`#price_${productid}`).value;
         let totalPrice = price * qty;
         rendershopping(productid, qty, price, totalPrice);
+        document.getElementById(`ship-pickup_${productid}`).innerHTML = `Added to cart! Quantity : ${qty}`;
 
-        // document.getElementById(`check-productid`).innerHTML = `${productid}`;
     } else if (event.target.matches(`.qtyButton.qtyButton-add`)){
         //Calling function to add quantity and assigning new quantity to product quantity label
         qty = addQty(document.querySelector(`#productQuantityLabel_${productid}`).innerHTML);
@@ -386,14 +386,17 @@ const handleClickOfProducts = event => {
         //Calling function to substract quantity and assigning new quantity to product quantity label
         qty = subQty(document.querySelector(`#productQuantityLabel_${productid}`).innerHTML);
         document.querySelector(`#productQuantityLabel_${productid}`).innerHTML = `${qty}`;
+
     }else if (event.target.matches(`button span`)){
         let favItem = document.querySelector(`#favouriteItem_${productid}`).style.color;
         if (favItem == `red`) {
             document.querySelector(`#favouriteItem_${productid}`).style.color = "rgb(167, 204, 247)";
-            console.log(`Removed as Favourite.`)
+            document.getElementById(`ship-pickup_${productid}`).innerHTML = `Removed as Favourite.`;
+
         } else {
             document.querySelector(`#favouriteItem_${productid}`).style.color = "red";
-            console.log(`Added as Favourite.`)
+            document.getElementById(`ship-pickup_${productid}`).innerHTML = `Added as Favourite.`;
+            
         }
     }else if (event.target.matches(`.shipHome`)){
         document.getElementById(`ship-pickup_${productid}`).innerHTML = `You preferred this item(s) to be shipped to your home address.`;

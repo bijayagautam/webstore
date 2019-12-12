@@ -283,6 +283,9 @@ p{
 
 .shipPickup{
     color: var(--darkcolor);
+    display: grid;
+    grid-template-columns: auto;
+    text-align: center;
 }
 
 .main-footer{

@@ -408,7 +408,7 @@ function rendershopping(productid, qty, price, totalPrice){
             <li><label id="check-productid">${productid}</label></li>
             <li><label id="check-qty"></label>${qty}</li>
             <li><label id="check-price"></label>$${price}</li>
-            <li><label id="check-total">$${totalPrice}</label></li>    
+            <li><label id="check-total">$${totalPrice.toFixed(2)}</label></li>    
           </ul>
         <hr>
         <p>Thank you for shopping</p>

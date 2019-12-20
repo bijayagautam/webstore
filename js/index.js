@@ -551,10 +551,46 @@ function showHideCheckout() {
     document.getElementById("viewCart").classList.toggle("show-hide");  
 }
 
+/*  Function: weatherChecker
+    Parameters: NA
+    Return: temperature
+    Description: Calls weather API to show selected city temperature */
+const weatherChecker = () => {
+    let dropDownList = document.getElementById("city");
+    const endPoint =`http://api.weatherstack.com/current?access_key=a056ce6621b73f1a5a0935dd17f9fd44&query=${dropDownList.value}`;
+    
+    //Sending an HTTP request to a server using endpoint
+    fetch(endPoint)
+    .then(function(res){
+        res.json()
+        .then(function(data){
+            let div = document.getElementById("weather-output");
+            let caution = getTempCaution(data.current.temperature);
+            div.innerHTML=`The temperature of ${dropDownList.value} is ${data.current.temperature} °C, ${caution}`
+        })
+    })
+}
+
+/*  Function: getTempCaution
+    Parameters: temp
+    Return: caution
+    Description: return caution based on selected city temperature */
+function getTempCaution(temp){
+    if(temp <= 1){
+        return `Please stay warm while moving.`;
+
+    }else{
+        return `It's fantastic to move today.`;
+    }
+}
+
 // Load Event Listener
 window.addEventListener('load', () => {
     //Rendering all products on page load
     renderProductsFromArray(allProducts);
+
+    //Weather Checker
+    document.getElementById("city").addEventListener("change", weatherChecker);
 
     //Searching product by product name
     document.getElementById('productName').addEventListener('input', submitFilterForm);

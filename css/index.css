@@ -183,6 +183,11 @@ p{
     padding: 1em 1em;
 }
 
+.weatherOutput{
+    font-size: 1rem;
+    color: var(--darkcolor);
+}
+
 .searchbox{
     width: 100%;
     padding: 0.5em;
@@ -413,6 +418,10 @@ p{
         grid-template-columns: 1fr 1fr 1fr;
         max-width: 80em;
         margin: 0 auto;
+    }
+
+    .weather-checker{
+        max-width: 40%;
     }
 }
 

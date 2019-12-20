@@ -63,6 +63,22 @@
         <!-- cart details goes here, pulled as html string from index.js -->
       </section>
 
+      <section class="weather-checker">
+        <form>
+          <label for="city temperature"></label>
+          <select id="city" class="category-dropdown">
+            <option value="" selected>Please select city you are moving</option>
+            <option value="Brampton">Brampton</option>
+            <option value="Oakville">Oakville </option>
+            <option value="Richmond Hill">Richmond Hill</option>
+            <option value="Toronto">Toronto</option>
+            <option value="Dallas">Dallas</option>
+          </select>
+        </form>
+  
+        <div id="weather-output" class="weatherOutput"></div>
+      </section>
+
       <section class="advertisment">
         <img src="img/christmas-sale-animation.gif" alt="sale">
       </section>
